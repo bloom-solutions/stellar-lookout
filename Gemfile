@@ -55,6 +55,8 @@ end
 group :test do
   gem "capybara", "~> 2.4"
   gem "rspec-rails", "~> 3.5"
+  gem "jsonapi-resources-matchers", require: false
+  gem "factory_girl_rails", "~> 4.8"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
