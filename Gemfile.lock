@@ -76,6 +76,8 @@ GEM
       railties (>= 3.0.0)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
+    faraday-detailed_logger (2.1.1)
+      faraday (~> 0.8)
     faraday-digestauth (0.2.1)
       faraday (~> 0.7)
       net-http-digest_auth (~> 1.4)
@@ -259,6 +261,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   dotenv-rails (~> 2.1)
   factory_girl_rails (~> 4.8)
+  faraday-detailed_logger (~> 2.1)
   hyperclient (= 0.8.2)
   jbuilder (~> 2.5)
   jquery-rails

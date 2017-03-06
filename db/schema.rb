@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170306055952) do
+ActiveRecord::Schema.define(version: 20170306074533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,25 @@ ActiveRecord::Schema.define(version: 20170306055952) do
     t.index ["external_id"], name: "index_operations_on_external_id", unique: true, using: :btree
   end
 
+  create_table "report_responses", force: :cascade do |t|
+    t.integer "report_id"
+    t.text    "body"
+    t.integer "status_code"
+    t.index ["report_id"], name: "index_report_responses_on_report_id", using: :btree
+    t.index ["status_code"], name: "index_report_responses_on_status_code", using: :btree
+  end
+
+  create_table "reports", force: :cascade do |t|
+    t.integer  "ward_id"
+    t.integer  "operation_id"
+    t.integer  "status",       default: 0, null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["operation_id"], name: "index_reports_on_operation_id", using: :btree
+    t.index ["ward_id", "operation_id"], name: "index_reports_on_ward_id_and_operation_id", unique: true, using: :btree
+    t.index ["ward_id"], name: "index_reports_on_ward_id", using: :btree
+  end
+
   create_table "wards", force: :cascade do |t|
     t.string   "address",      null: false
     t.string   "callback_url", null: false
@@ -54,4 +73,7 @@ ActiveRecord::Schema.define(version: 20170306055952) do
     t.index ["address", "callback_url"], name: "index_wards_on_address_and_callback_url", unique: true, using: :btree
   end
 
+  add_foreign_key "report_responses", "reports"
+  add_foreign_key "reports", "operations"
+  add_foreign_key "reports", "wards"
 end
