@@ -7,6 +7,7 @@ class CreateOperations < ActiveRecord::Migration[5.0]
       Operation::ADDRESS_FIELDS.each do |field|
         t.index("((body ->> '#{field}'::text))", name: "operations_#{field}", using: :btree)
       end
+      t.timestamps
       t.index ["external_id"], name: "index_operations_on_external_id", unique: true, using: :btree
     end
   end
