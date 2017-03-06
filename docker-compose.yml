@@ -1,0 +1,72 @@
+version: '2'
+services:
+  db:
+    image: postgres:9.6
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres:/var/lib/postgresql/data
+  redis:
+    image: redis:3.0.5
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis:/var/lib/redis/data
+  web:
+    build:
+      dockerfile: "ops/dev/Dockerfile"
+      context: .
+    ports:
+      - "3000:3000"
+      - "9876:9876"
+    env_file:
+      - .env
+    depends_on:
+      - db
+    links:
+      - redis
+    volumes_from:
+      - bundle
+    volumes:
+      - .:/app
+      - ../:/src
+  # test:
+  #   build:
+  #     context: .
+  #     dockerfile: "ops/test/Dockerfile"
+  #   env_file:
+  #     - .env
+  #     - .env.test
+  #   depends_on:
+  #     - db
+  #     - redis
+  #   volumes_from:
+  #     - bundle
+  #   volumes:
+  #     - .:/app
+  #     - ../:/src
+  sidekiq:
+    build:
+      dockerfile: "ops/dev/Dockerfile"
+      context: .
+    command: bundle exec sidekiq -C config/sidekiq.yml
+    depends_on:
+      - db
+    links:
+      - redis
+    env_file:
+      - .env
+    volumes_from:
+      - bundle
+    volumes:
+      - ./:/app
+      - ../:/src
+  bundle:
+    image: busybox
+    volumes:
+      - /bundle
+volumes:
+  redis:
+  postgres:
+  bundle:
+  src:

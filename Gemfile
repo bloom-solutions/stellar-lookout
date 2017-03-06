@@ -9,7 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg', "0.19.0"
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -21,6 +21,8 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem "jsonapi-resources", "0.9.0"
+gem "hyperclient", "0.8.2"
+gem "light-service"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -35,11 +37,13 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem "sidekiq", "~> 4.2"
+gem 'sidekiq-unique-jobs', "~> 4.0"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "dotenv-rails", "~> 2.1"
-  gem 'byebug', platform: :mri
+  gem "pry-byebug"
 end
 
 group :development do
@@ -57,6 +61,9 @@ group :test do
   gem "rspec-rails", "~> 3.5"
   gem "jsonapi-resources-matchers", require: false
   gem "factory_girl_rails", "~> 4.8"
+  gem "shoulda-matchers", "~> 3.1"
+  gem "vcr", "~> 3.0"
+  gem "webmock", "~> 2.3"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

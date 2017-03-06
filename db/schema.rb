@@ -10,7 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170304125714) do
+ActiveRecord::Schema.define(version: 20170305070003) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "ledgers", force: :cascade do |t|
+    t.string  "external_id"
+    t.integer "sequence",        null: false
+    t.integer "operation_count"
+    t.index ["external_id"], name: "index_ledgers_on_external_id", using: :btree
+    t.index ["sequence"], name: "index_ledgers_on_sequence", using: :btree
+  end
+
+  create_table "operations", force: :cascade do |t|
+    t.string  "external_id",                    null: false
+    t.integer "ledger_sequence",                null: false
+    t.jsonb   "body",            default: "{}", null: false
+    t.index "((body ->> 'asset_issuer'::text))", name: "operations_asset_issuer", using: :btree
+    t.index "((body ->> 'buying_asset_issuer'::text))", name: "operations_buying_asset_issuer", using: :btree
+    t.index "((body ->> 'from'::text))", name: "operations_from", using: :btree
+    t.index "((body ->> 'funder'::text))", name: "operations_funder", using: :btree
+    t.index "((body ->> 'into'::text))", name: "operations_into", using: :btree
+    t.index "((body ->> 'selling_asset_issuer'::text))", name: "operations_selling_asset_issuer", using: :btree
+    t.index "((body ->> 'send_asset_issuer'::text))", name: "operations_send_asset_issuer", using: :btree
+    t.index "((body ->> 'source_account'::text))", name: "operations_source_account", using: :btree
+    t.index "((body ->> 'to'::text))", name: "operations_to", using: :btree
+    t.index "((body ->> 'trustee'::text))", name: "operations_trustee", using: :btree
+    t.index "((body ->> 'trustor'::text))", name: "operations_trustor", using: :btree
+    t.index ["external_id"], name: "index_operations_on_external_id", unique: true, using: :btree
+  end
 
   create_table "wards", force: :cascade do |t|
     t.string   "address",      null: false
@@ -18,7 +47,7 @@ ActiveRecord::Schema.define(version: 20170304125714) do
     t.string   "secret",       null: false
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.index ["address", "callback_url"], name: "index_wards_on_address_and_callback_url", unique: true
+    t.index ["address", "callback_url"], name: "index_wards_on_address_and_callback_url", unique: true, using: :btree
   end
 
 end
