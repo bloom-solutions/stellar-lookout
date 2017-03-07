@@ -2,21 +2,11 @@ require 'rails_helper'
 
 RSpec.describe SendReportJob do
 
-  let(:actions) do
-    [
-      SendingReport::PostOperationBody,
-      SendingReport::ProcessResponse,
-    ]
-  end
+  let(:report) { build_stubbed(:report) }
 
-  context "report is pending" do
-    it "does nothing" do
-      actions.each do |action|
-        expect(action).to_not receive(:call)
-      end
-
-      described_class.(report)
-    end
+  it "delegates work to SendReport" do
+    expect(SendReport).to receive(:call).with(report)
+    described_class.new.perform(report)
   end
 
 end
