@@ -6,7 +6,8 @@ RSpec.describe Ledger do
     it do
       is_expected.to have_many(:operations).
         with_primary_key(:sequence).
-        with_foreign_key(:ledger_sequence)
+        with_foreign_key(:ledger_sequence).
+        dependent(:destroy)
     end
   end
 
