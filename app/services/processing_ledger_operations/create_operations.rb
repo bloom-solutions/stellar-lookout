@@ -15,7 +15,7 @@ module ProcessingLedgerOperations
 
     def self.each_operation(client, &block)
       client.records.each { |remote_operation| block.yield(remote_operation) }
-      self.operations(client._links.next, &block) if client.records.any?
+      self.each_operation(client._links.next, &block) if client.records.any?
     end
 
   end
