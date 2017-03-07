@@ -38,6 +38,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem "sidekiq", "~> 4.2"
+gem "sidekiq-cron", "0.4.4"
 gem 'sidekiq-unique-jobs', "~> 4.0"
 gem "faraday-detailed_logger", "~> 2.1"
 

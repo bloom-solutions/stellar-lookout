@@ -1,0 +1,7 @@
+process_ledgers:
+  cron: "*/5 * * * *"
+  class: "ProcessLedgersJob"
+
+process_pending_reports:
+  cron: "*/5 * * * *"
+  class: "ProcessPendingReportsJob"

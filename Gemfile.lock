@@ -176,6 +176,8 @@ GEM
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
     redis (3.3.2)
+    redis-namespace (1.5.2)
+      redis (~> 3.0, >= 3.0.4)
     rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
@@ -193,6 +195,7 @@ GEM
       rspec-mocks (~> 3.5.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
+    rufus-scheduler (3.2.2)
     safe_yaml (1.0.4)
     sass (3.4.23)
     sass-rails (5.0.6)
@@ -208,6 +211,10 @@ GEM
       connection_pool (~> 2.2, >= 2.2.0)
       rack-protection (>= 1.5.0)
       redis (~> 3.2, >= 3.2.1)
+    sidekiq-cron (0.4.4)
+      redis-namespace (>= 1.5.2)
+      rufus-scheduler (>= 2.0.24)
+      sidekiq (>= 4.2.1)
     sidekiq-unique-jobs (4.0.18)
       sidekiq (>= 2.6)
       thor
@@ -277,6 +284,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   shoulda-matchers (~> 3.1)
   sidekiq (~> 4.2)
+  sidekiq-cron (= 0.4.4)
   sidekiq-unique-jobs (~> 4.0)
   spring
   spring-commands-rspec
