@@ -3,7 +3,7 @@ require 'rails_helper'
 module SendingReport
   RSpec.describe PostOperationBody do
 
-    let(:operation) { build_stubbed(:operation, body: {jay: "son"}.to_json) }
+    let(:operation) { build_stubbed(:operation, body: {jay: "son"}) }
     let(:ward) do
       build_stubbed(:ward, {
         secret: SecureRandom.uuid,

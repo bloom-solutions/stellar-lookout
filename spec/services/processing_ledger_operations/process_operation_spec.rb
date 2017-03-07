@@ -66,7 +66,7 @@ module ProcessingLedgerOperations
         expect(Operation).to receive(:create!).with(
           external_id: "12884905986",
           ledger_sequence: 3,
-          body: remote_operation.to_json,
+          body: remote_operation.to_hash,
         ).and_return(operation)
 
         expect(EnqueueProcessWardOperationJobs).to receive(:call).

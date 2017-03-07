@@ -8,7 +8,7 @@ module SendingReport
       let(:response) do
         instance_double(Faraday::Response, {
           status: 400,
-          body: {some: "response"}.to_json,
+          body: {some: "response"},
         })
       end
 
@@ -16,7 +16,7 @@ module SendingReport
         expect(ReportResponse).to receive(:create!).with(
           report_id: report.id,
           status: 400,
-          body: {some: "response"}.to_json,
+          body: {some: "response"},
         )
 
         expect(report).to_not receive(:complete!)
@@ -30,7 +30,7 @@ module SendingReport
       let(:response) do
         instance_double(Faraday::Response, {
           status: 200,
-          body: {some: "response"}.to_json,
+          body: {some: "response"},
         })
       end
 
@@ -38,7 +38,7 @@ module SendingReport
         expect(ReportResponse).to receive(:create!).with(
           report_id: report.id,
           status: 200,
-          body: {some: "response"}.to_json,
+          body: {some: "response"},
         )
 
         expect(report).to receive(:complete!)

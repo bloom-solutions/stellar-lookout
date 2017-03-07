@@ -1,8 +1,9 @@
 class Ward < ActiveRecord::Base
 
   scope :watching, ->(operation) do
-    body = JSON.parse(operation.body).with_indifferent_access
-    addresses = Operation::ADDRESS_FIELDS.map { |field| body[field] }.compact
+    addresses = Operation::ADDRESS_FIELDS.map do |field|
+      operation.body[field.to_s]
+    end.compact
     where(address: addresses)
   end
 

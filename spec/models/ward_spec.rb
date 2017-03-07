@@ -14,7 +14,7 @@ RSpec.describe Ward do
         let(:operation_body) do
           {field => "GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7"}
         end
-        let(:operation) { create(:operation, body: operation_body.to_json) }
+        let(:operation) { create(:operation, body: operation_body) }
 
         it "includes the ward" do
           expect(described_class.watching(operation)).to include(ward)
@@ -33,7 +33,7 @@ RSpec.describe Ward do
           master_key_weight: 0
         }
       end
-      let(:operation) { create(:operation, body: operation_body.to_json) }
+      let(:operation) { create(:operation, body: operation_body) }
 
       it "does not include the ward" do
         expect(described_class.watching(operation)).to_not include(ward)

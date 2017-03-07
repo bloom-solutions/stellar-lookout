@@ -15,7 +15,7 @@ module ProcessingLedgerOperations
       operation = Operation.create!({
         external_id: external_id,
         ledger_sequence: c.ledger_sequence,
-        body: remote_operation.to_json,
+        body: remote_operation.to_hash,
       })
 
       EnqueueProcessWardOperationJobs.(operation)
