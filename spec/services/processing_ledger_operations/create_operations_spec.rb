@@ -15,21 +15,12 @@ module ProcessingLedgerOperations
     it "creates non-existing operations and passes work to ProcessWardOperationJob" do
       expect(ledger.operations.count).to be_zero
 
-      # expect(EnqueueProcessWardOperations).to receive(:call).with(operation)
-      # ward_1_operation_ids = %w(12884905986 12884905987)
-      # ward_1_operation_ids.each do |operation_id|
-      #   expect(ProcessWardOperationJob).to receive(:perform_later).
-      #     with(ward_1.id, operation_id)
-      # end
-
       described_class.execute(client: client, ledger_sequence: ledger_sequence)
 
       expected_operation_ids = %w(12884905985 12884905986 12884905987)
       expected_operations =
         ledger.operations.where(external_id: expected_operation_ids)
       expect(expected_operations.count).to eq 3
-
-      # expect(ProcessWardOperationJob).to_not receive(:perform_later)
 
       described_class.execute(client: client, ledger_sequence: ledger_sequence)
 
