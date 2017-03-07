@@ -1,6 +1,3 @@
-require 'sidekiq/web'
-require 'sidekiq/cron/web'
-
 Sidekiq.configure_server do |config|
   schedule_file = Rails.root.join("config", "schedule.yml")
 
