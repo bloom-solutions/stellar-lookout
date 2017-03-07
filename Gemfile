@@ -64,6 +64,7 @@ group :test do
   gem "jsonapi-resources-matchers", require: false
   gem "factory_girl_rails", "~> 4.8"
   gem "shoulda-matchers", "~> 3.1"
+  gem "timecop", "0.8.0"
   gem "vcr", "~> 3.0"
   gem "webmock", "~> 2.3"
 end
