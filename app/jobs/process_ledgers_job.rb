@@ -2,16 +2,20 @@ class ProcessLedgersJob
 
   include Sidekiq::Worker
   sidekiq_options retry: false
+  BATCH_SIZE = 5
 
-  def perform(history_latest_ledger=nil)
-    # NOTE: Accept history_latest_ledger arg for testing purposes.
-    # On prod, you would not want to pass in what the latest ledger
-    # sequence on Horizon is.
-    history_latest_ledger ||= client.history_latest_ledger
-
+  def perform(batch_size=5)
     latest_ledger = Ledger.order(sequence: :desc).first
 
-    (latest_ledger.sequence..history_latest_ledger).each do |n|
+    from_sequence = latest_ledger.present? ? latest_ledger.sequence : 1
+    to_sequence = from_sequence + batch_size
+
+    horizon_latest_ledger_sequence = client.history_latest_ledger
+    if to_sequence > horizon_latest_ledger_sequence
+      to_sequence = horizon_latest_ledger_sequence
+    end
+
+    (from_sequence..to_sequence).each do |n|
       CreateLedgerJob.perform_later(n)
     end
   end

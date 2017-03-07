@@ -12,19 +12,46 @@ RSpec.describe ProcessLedgersJob, vcr: {record: :once} do
         c.options[:async] = false
       end
     end
-    let(:history_latest_ledger) { client.history_latest_ledger }
-    let(:latest_sequence) { history_latest_ledger - 5 }
-
-    before do
-      create(:ledger, sequence: latest_sequence)
+    let(:latest_sequence) do
+      client.history_latest_ledger - described_class::BATCH_SIZE
     end
 
-    it "creates ledger records with the right sequence" do
-      (latest_sequence..history_latest_ledger).each do |n|
-        expect(CreateLedgerJob).to receive(:perform_later).with(n)
+    context "batch_size doesn't go beyong horizon history_latest_ledger" do
+      before do
+        create(:ledger, sequence: latest_sequence)
       end
 
-      described_class.new.perform(history_latest_ledger)
+      it "creates ledger records with the right sequence, #{described_class::BATCH_SIZE} (default) at a time, not surpassing the horizon's history_latest_ledger" do
+        described_class.new.perform(2)
+
+        (latest_sequence..latest_sequence+2).each do |n|
+          expect(CreateLedgerJob).to have_been_enqueued.with(n)
+        end
+      end
+    end
+
+    context "batch_size brings it later than what horizon has" do
+      before do
+        create(:ledger, sequence: latest_sequence)
+      end
+
+      it "creates ledgers until horizon's history_latest_ledger" do
+        described_class.new.perform(8)
+
+        (latest_sequence..client.history_latest_ledger).each do |n|
+          expect(CreateLedgerJob).to have_been_enqueued.with(n)
+        end
+      end
+    end
+
+    context "no ledgers exist" do
+      it "starts from 1" do
+        described_class.new.perform(5)
+
+        (1..5).each do |n|
+          expect(CreateLedgerJob).to have_been_enqueued.with(n)
+        end
+      end
     end
   end
 
