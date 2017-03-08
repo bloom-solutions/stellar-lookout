@@ -1,0 +1,10 @@
+#!/bin/bash
+# Usage: scripts/build [command]
+# Build an image for staging, production
+
+# This makes sure the script fails on the first failing command
+set -e
+
+if [[ "$TRAVIS_BRANCH" =~ ^staging_.+$ ]]; then
+  . ./scripts/build-staging
+fi

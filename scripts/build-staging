@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# This makes sure the script fails on the first failing command
+set -e
+
+. ./scripts/build-base
+
+docker build --rm=false \
+  --file=ops/prod/Dockerfile \
+  --tag=$REPO_NAME:staging-latest \
+  --tag=$REPO_NAME:staging-$GIT_REF \
+  .
+docker push $REPO_NAME:staging-latest
+docker push $REPO_NAME:staging-$GIT_REF
