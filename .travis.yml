@@ -10,6 +10,8 @@ before_script:
   - bundle exec rake db:create db:test:prepare
 after_success:
   - ./scripts/build
+addons:
+  postgresql: "9.6"
 notifications:
   slack:
     secure: knjX1Gb1j6JlmXc8Oz5UPgnzGz5fjwi7VpMUl9Ra33Z/aWe7ibMsGYpSlT2yNyRJP5dQGbFtNrPJXq7P7s+qcWC8JnRGd33J4//QWI1rI3YE0a9XRytryYTn9StlqRpUdwEDD1GXubS/gl+OAE7PktGobkgiKjOGNfiaIi7lJ7f0NkuvBlNcfq3UTJQDMhRt2XE1HwiXfVuSAeNsfiY3GFnelGOxCE77SJ5SplRIFNDb5nQw9e3qFKj7Bd8ODO4wi5ZiiLziwf6lOUBHvnYt18H7hJcC+l91JgkV1+NB27cxD4DGLjR2dC2cftrMYbS9k/053c5b8zA3oqe2UCJF+9FVr7agLZD9ToYhwzJdREOdOLJ+zEbegaxVGVAmr0kjRLWYpUEqfXsS6jDY1K4UdFbXF6hBhINSMPvaXsVP1bP6BsnO0vqMpqoPZVANkeYAm36l9eKB5KNdiSY7tVf6RulcS4K5XXq8v+ysjfBn9UZXeEdBBCxUYcgOWOIFnYu77OXFxjiEn5ssnZu/xjC+04us9m31n0llUAxwQy+Zc7HJfQP/87UR5sms4szDAosiTIOeMyjhrlEwauPb6JLlu/IHtdaB7W3j6BkXvh3tSUC5JgqrBcQ+KFZ6D2gi4tedOD6e/Q2b2WkwX3toXCToftTHjAhaQA/LnYCPsyb5Skg=
