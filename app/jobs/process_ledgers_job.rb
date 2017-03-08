@@ -29,7 +29,7 @@ class ProcessLedgersJob < ActiveJob::Base
   end
 
   def uri(cursor)
-    uri = URI("https://horizon.stellar.org")
+    uri = URI(ENV["HORIZON_URL"])
     uri.path = "/ledgers"
     uri.query = URI.encode_www_form(order: "asc", limit: LIMIT, cursor: cursor)
     uri.to_s
