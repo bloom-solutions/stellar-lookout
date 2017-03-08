@@ -52,14 +52,6 @@ RSpec.describe ProcessLedgersJob, vcr: {record: :once} do
           with(1, ledger_105.sequence)
       end
     end
-
-    context "beyond the batch_step the job is supposed to process" do
-      it "does not enqueue a job" do
-        described_class.new.perform(described_class::BATCH_SIZE)
-
-        expect(described_class).to_not have_been_enqueued
-      end
-    end
   end
 
 end

@@ -1,15 +1,12 @@
 class ProcessLedgersJob < ActiveJob::Base
 
-  BATCH_SIZE = 2
   LIMIT = 100
 
   def perform(batch_step=0, from_sequence=nil)
     from_cursor = cursor_of(from_sequence)
     remote_ledgers = remote_ledgers_from(from_cursor)
     remote_ledgers.each { |record| process_remote_ledger(record) }
-    if batch_step+1 < BATCH_SIZE
-      self.class.perform_later(batch_step+1, remote_ledgers.last["sequence"])
-    end
+    ProcessingLedgers::EnqueueNextBatch.(batch_step, remote_ledgers)
   end
 
   private
