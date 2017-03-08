@@ -1,29 +1,45 @@
-class ProcessLedgersJob
+class ProcessLedgersJob < ActiveJob::Base
 
-  include Sidekiq::Worker
-  sidekiq_options retry: false
-  BATCH_SIZE = 5
+  BATCH_SIZE = 2
+  LIMIT = 20
 
-  def perform(batch_size=5)
-    latest_ledger = Ledger.order(sequence: :desc).first
-
-    from_sequence = latest_ledger.present? ? latest_ledger.sequence : 1
-    to_sequence = from_sequence + batch_size
-
-    horizon_latest_ledger_sequence = client.history_latest_ledger
-    if to_sequence > horizon_latest_ledger_sequence
-      to_sequence = horizon_latest_ledger_sequence
-    end
-
-    (from_sequence..to_sequence).each do |n|
-      CreateLedgerJob.perform_later(n)
+  def perform(batch_step=0, from_sequence=nil)
+    from_cursor = cursor_of(from_sequence)
+    remote_ledgers = remote_ledgers_from(from_cursor)
+    remote_ledgers.each { |record| process_remote_ledger(record) }
+    if batch_step+1 < BATCH_SIZE
+      self.class.perform_later(batch_step+1, remote_ledgers.last["sequence"])
     end
   end
 
   private
 
-  def client
-    Hyperclient.new(ENV["HORIZON_URL"]) do |c|
+  def cursor_of(sequence)
+    ledger = if sequence
+               Ledger.find_by(sequence: sequence)
+             else
+               Ledger.order(sequence: :asc).last
+             end
+    ledger.present? ? ledger.paging_token : nil
+  end
+
+  def process_remote_ledger(remote_ledger)
+    ProcessLedger.(remote_ledger.to_hash)
+  end
+
+  def remote_ledgers_from(cursor)
+    client(cursor).records
+  end
+
+  def uri(cursor)
+    uri = URI("https://horizon.stellar.org")
+    uri.path = "/ledgers"
+    uri.query = URI.encode_www_form(order: "asc", limit: LIMIT, cursor: cursor)
+    uri.to_s
+  end
+
+  def client(cursor)
+    Hyperclient.new(uri(cursor)) do |c|
       c.options[:async] = false
     end
   end

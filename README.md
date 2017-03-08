@@ -7,19 +7,8 @@ Almost all actions in the app run in jobs. Almost all jobs are triggered by a sc
 Documentation is still under development.
 
 ## ProcessLedgersJob
-- load horizon main API page, figure out how many ledgers
-- create ledger records for all missing ledgers
-- enqueue ProcessLedgerJob with ledger sequence for each ledger created
-- runs every 5 seconds
-- begins from `sequence` (taken from local ledger with highest sequence)
-- create Ledger for each ledger, saving operation_count, sequence, and ID
-- pass ledger_id ProcessLedgerJob
-
-## ProcessLedgerJob
-- fetch ledger info, save operation_count and external_id
-- if op count is the same as the number of local operations, do nothing
-- else
-  - delegate to ProcessLedgerOperationsJob
+- walk through ledgers, starting from latest local ledger or the first ledger, until hard-coded limit
+- create ledgers for each ledger, and enqueue ProcessLedgerOperationsJob if needed
 
 ## ProcessLedgerOperationsJob
 - fetch operations of ledger

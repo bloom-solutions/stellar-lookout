@@ -2,11 +2,9 @@ class ProcessLedger
 
   extend LightService::Organizer
 
-  def self.call(sequence)
-    with(ledger_sequence: sequence).reduce(
-      ProcessingLedger::InitClient,
-      ProcessingLedger::FindLedger,
-      ProcessingLedger::UpdateLedger,
+  def self.call(remote_ledger_hash)
+    with(remote_ledger_hash: remote_ledger_hash).reduce(
+      ProcessingLedger::CreateOrUpdateLedger,
       ProcessingLedger::EnqueueProcessLedgerOperations,
     )
   end

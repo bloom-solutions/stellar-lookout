@@ -6,4 +6,6 @@ class Ledger < ActiveRecord::Base
     dependent: :destroy,
   })
 
+  store_accessor :body, :operation_count, :paging_token
+
 end

@@ -2,21 +2,21 @@ require 'rails_helper'
 
 RSpec.describe ProcessLedger do
 
+  let(:remote_ledger_hash) { {hash: "1"} }
+
   it "calls actions in order" do
     actions = [
-      ProcessingLedger::InitClient,
-      ProcessingLedger::FindLedger,
-      ProcessingLedger::UpdateLedger,
+      ProcessingLedger::CreateOrUpdateLedger,
       ProcessingLedger::EnqueueProcessLedgerOperations,
     ]
 
-    ctx = LightService::Context.new(ledger_sequence: 1)
+    ctx = LightService::Context.new(remote_ledger_hash: remote_ledger_hash)
 
     actions.each do |action|
       expect(action).to receive(:execute).with(ctx).and_return(ctx)
     end
 
-    described_class.(1)
+    described_class.(remote_ledger_hash)
   end
 
 end

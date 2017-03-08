@@ -17,20 +17,20 @@ ActiveRecord::Schema.define(version: 20170306074533) do
 
   create_table "ledgers", force: :cascade do |t|
     t.string   "external_id"
-    t.integer  "sequence",        null: false
-    t.integer  "operation_count"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.integer  "sequence",                 null: false
+    t.jsonb    "body",        default: {}, null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.index ["external_id"], name: "index_ledgers_on_external_id", using: :btree
     t.index ["sequence"], name: "index_ledgers_on_sequence", using: :btree
   end
 
   create_table "operations", force: :cascade do |t|
-    t.string   "external_id",                    null: false
-    t.integer  "ledger_sequence",                null: false
-    t.jsonb    "body",            default: "{}", null: false
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.string   "external_id",                  null: false
+    t.integer  "ledger_sequence",              null: false
+    t.jsonb    "body",            default: {}, null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.index "((body ->> 'asset_issuer'::text))", name: "operations_asset_issuer", using: :btree
     t.index "((body ->> 'buying_asset_issuer'::text))", name: "operations_buying_asset_issuer", using: :btree
     t.index "((body ->> 'from'::text))", name: "operations_from", using: :btree

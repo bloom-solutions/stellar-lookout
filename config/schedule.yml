@@ -1,6 +1,7 @@
 process_ledgers:
   cron: "*/5 * * * *"
   class: "ProcessLedgersJob"
+  active_job: true
 
 process_pending_reports:
   cron: "*/5 * * * *"
