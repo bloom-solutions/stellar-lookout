@@ -14,12 +14,12 @@ module SendingReport
       build_stubbed(:report, operation: operation, ward: ward)
     end
     let(:expected_hmac_signature) do
-      OpenSSL::HMAC.hexdigest("SHA256", ward.secret, operation.body)
+      OpenSSL::HMAC.hexdigest("SHA256", ward.secret, operation.body.to_json)
     end
 
     it "posts to the operation's body with the correct hmac signature" do
       stub_request(:post, "https://cb.com").with(
-        body: operation.body,
+        body: operation.body.to_json,
         headers: {"Authorization" => "HMAC-SHA256 #{expected_hmac_signature}"},
       ).to_return(body: {"ok" => "body"}.to_json)
 

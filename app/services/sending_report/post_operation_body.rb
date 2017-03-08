@@ -19,13 +19,14 @@ module SendingReport
 
       c.response = client.post do |request|
         request.url ward.callback_url
-        request.body = operation.body
+        request.body = operation.body.to_json
         request.headers["Authorization"] = "HMAC-SHA256 #{signature}"
       end
     end
 
     def self.hmac_signature_for(body, secret)
-      OpenSSL::HMAC.hexdigest("SHA256", secret, body)
+      json = body.respond_to?(:to_json) ? body.to_json : body
+      OpenSSL::HMAC.hexdigest("SHA256", secret, json)
     end
 
   end
