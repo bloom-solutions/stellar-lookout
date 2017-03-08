@@ -7,7 +7,7 @@ RSpec.describe ProcessLedgersJob, vcr: {record: :once} do
       it "starts without a cursor and walks through the list of ledgers until `batch_size` page" do
         described_class.new.perform
 
-        expect(Ledger.pluck(:sequence).to_set).to eq (1..20).to_set
+        expect(Ledger.pluck(:sequence).to_set).to eq (1..100).to_set
 
         ledger_3 = Ledger.find_by(sequence: 3)
         expect(ledger_3.external_id).
@@ -27,8 +27,12 @@ RSpec.describe ProcessLedgersJob, vcr: {record: :once} do
         expect(ledger_20.paging_token).to eq "85899345920"
         expect(ledger_20.operation_count).to eq 0
 
+        ledger_100 = Ledger.find_by(sequence: 100)
+        expect(ledger_100.paging_token).to eq "429496729600"
+        expect(ledger_100.operation_count).to eq 0
+
         expect(described_class).to have_been_enqueued.
-          with(1, ledger_20.sequence)
+          with(1, ledger_100.sequence)
       end
     end
 
@@ -40,12 +44,12 @@ RSpec.describe ProcessLedgersJob, vcr: {record: :once} do
       it "starts with the latest ledger's cursor and walks through the list of ledgers until `batch_size` page" do
         described_class.new.perform
 
-        ledger_25 = Ledger.find_by(sequence: 25)
-        expect(ledger_25).to be_present
-        expect(ledger_25.paging_token).to eq "107374182400"
+        ledger_105 = Ledger.find_by(sequence: 105)
+        expect(ledger_105).to be_present
+        expect(ledger_105.paging_token).to eq "450971566080"
 
         expect(described_class).to have_been_enqueued.
-          with(1, ledger_25.sequence)
+          with(1, ledger_105.sequence)
       end
     end
 

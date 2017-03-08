@@ -1,7 +1,7 @@
 class ProcessLedgersJob < ActiveJob::Base
 
   BATCH_SIZE = 2
-  LIMIT = 20
+  LIMIT = 100
 
   def perform(batch_step=0, from_sequence=nil)
     from_cursor = cursor_of(from_sequence)

@@ -775,4 +775,3659 @@ http_interactions:
         }
     http_version: 
   recorded_at: Wed, 08 Mar 2017 02:19:50 GMT
+- request:
+    method: get
+    uri: https://horizon.stellar.org/ledgers?cursor&limit=100&order=asc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/hal+json
+      Accept:
+      - application/hal+json,application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/hal+json; charset=utf-8
+      Date:
+      - Wed, 08 Mar 2017 03:19:34 GMT
+      X-Ratelimit-Limit:
+      - '72000'
+      X-Ratelimit-Remaining:
+      - '71998'
+      X-Ratelimit-Reset:
+      - '3593'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "_links": {
+            "self": {
+              "href": "https://horizon.stellar.org/ledgers?order=asc\u0026limit=100\u0026cursor="
+            },
+            "next": {
+              "href": "https://horizon.stellar.org/ledgers?order=asc\u0026limit=100\u0026cursor=429496729600"
+            },
+            "prev": {
+              "href": "https://horizon.stellar.org/ledgers?order=desc\u0026limit=100\u0026cursor=4294967296"
+            }
+          },
+          "_embedded": {
+            "records": [
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/1"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/1/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/1/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/1/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/1/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "39c2a3cd4141b2853e70d84601faa44744660334b48f3228e0309342e3f4eb48",
+                "paging_token": "4294967296",
+                "hash": "39c2a3cd4141b2853e70d84601faa44744660334b48f3228e0309342e3f4eb48",
+                "sequence": 1,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "1970-01-01T00:00:00Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000000",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 100
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/2"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/2/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/2/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/2/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/2/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "fe0f6bea5f341344fdb5bc6fc4ad719dd63071d9203e9a1e7f17c68ea1ecebde",
+                "paging_token": "8589934592",
+                "hash": "fe0f6bea5f341344fdb5bc6fc4ad719dd63071d9203e9a1e7f17c68ea1ecebde",
+                "prev_hash": "39c2a3cd4141b2853e70d84601faa44744660334b48f3228e0309342e3f4eb48",
+                "sequence": 2,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T16:46:54Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000000",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/3"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/3/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/3/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/3/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/3/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "ec168d452542589dbc2d0eb6d58c74b9bb2ccb93bba879a3b3fa73fdfa730182",
+                "paging_token": "12884901888",
+                "hash": "ec168d452542589dbc2d0eb6d58c74b9bb2ccb93bba879a3b3fa73fdfa730182",
+                "prev_hash": "fe0f6bea5f341344fdb5bc6fc4ad719dd63071d9203e9a1e7f17c68ea1ecebde",
+                "sequence": 3,
+                "transaction_count": 1,
+                "operation_count": 3,
+                "closed_at": "2015-09-30T17:15:54Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/4"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/4/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/4/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/4/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/4/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "393942249f55db38ac9ef3619fe9a0d9b922fc422903b7371f2c2f05a0937b8b",
+                "paging_token": "17179869184",
+                "hash": "393942249f55db38ac9ef3619fe9a0d9b922fc422903b7371f2c2f05a0937b8b",
+                "prev_hash": "ec168d452542589dbc2d0eb6d58c74b9bb2ccb93bba879a3b3fa73fdfa730182",
+                "sequence": 4,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:15:59Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/5"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/5/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/5/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/5/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/5/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "a6dec3881fa11f6d0fb92b8ba545b70fa5db453c982a2dee9e28a1ca21d2fd64",
+                "paging_token": "21474836480",
+                "hash": "a6dec3881fa11f6d0fb92b8ba545b70fa5db453c982a2dee9e28a1ca21d2fd64",
+                "prev_hash": "393942249f55db38ac9ef3619fe9a0d9b922fc422903b7371f2c2f05a0937b8b",
+                "sequence": 5,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:16:04Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/6"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/6/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/6/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/6/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/6/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "05c133511ee5ff103313a03aab03b2c74eebfdb0c3016b9ee64e336b514c8641",
+                "paging_token": "25769803776",
+                "hash": "05c133511ee5ff103313a03aab03b2c74eebfdb0c3016b9ee64e336b514c8641",
+                "prev_hash": "a6dec3881fa11f6d0fb92b8ba545b70fa5db453c982a2dee9e28a1ca21d2fd64",
+                "sequence": 6,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:16:09Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/7"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/7/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/7/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/7/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/7/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "faaa141d8e87db7c641e10ac976326e91985adc57dd9524de884aa011935c0b7",
+                "paging_token": "30064771072",
+                "hash": "faaa141d8e87db7c641e10ac976326e91985adc57dd9524de884aa011935c0b7",
+                "prev_hash": "05c133511ee5ff103313a03aab03b2c74eebfdb0c3016b9ee64e336b514c8641",
+                "sequence": 7,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:16:14Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/8"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/8/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/8/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/8/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/8/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "65903707127344fcaa3008e029613c23f2d2dfe6927d6e8cf34186ccb1251321",
+                "paging_token": "34359738368",
+                "hash": "65903707127344fcaa3008e029613c23f2d2dfe6927d6e8cf34186ccb1251321",
+                "prev_hash": "faaa141d8e87db7c641e10ac976326e91985adc57dd9524de884aa011935c0b7",
+                "sequence": 8,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:16:19Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/9"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/9/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/9/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/9/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/9/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "da0516f96a9d3a00e8f60c60307cad062021cbad3c99f72ad8e277803dece482",
+                "paging_token": "38654705664",
+                "hash": "da0516f96a9d3a00e8f60c60307cad062021cbad3c99f72ad8e277803dece482",
+                "prev_hash": "65903707127344fcaa3008e029613c23f2d2dfe6927d6e8cf34186ccb1251321",
+                "sequence": 9,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:16:24Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/10"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/10/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/10/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/10/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/10/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "31c33314a9d6f1d1e07040029f56403fc410829a45dfe9cc662c6b2dce8f53b3",
+                "paging_token": "42949672960",
+                "hash": "31c33314a9d6f1d1e07040029f56403fc410829a45dfe9cc662c6b2dce8f53b3",
+                "prev_hash": "da0516f96a9d3a00e8f60c60307cad062021cbad3c99f72ad8e277803dece482",
+                "sequence": 10,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:16:29Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/11"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/11/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/11/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/11/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/11/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "bb0180f29ca1ce382dd396165fc2c4a425d3c0e3b8f797c4690c3bf399acd57a",
+                "paging_token": "47244640256",
+                "hash": "bb0180f29ca1ce382dd396165fc2c4a425d3c0e3b8f797c4690c3bf399acd57a",
+                "prev_hash": "31c33314a9d6f1d1e07040029f56403fc410829a45dfe9cc662c6b2dce8f53b3",
+                "sequence": 11,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:16:34Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/12"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/12/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/12/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/12/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/12/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "dd594fa30e56415bb5c6800ec99fc75c5c600edc169f146b3db18234fbb42d36",
+                "paging_token": "51539607552",
+                "hash": "dd594fa30e56415bb5c6800ec99fc75c5c600edc169f146b3db18234fbb42d36",
+                "prev_hash": "bb0180f29ca1ce382dd396165fc2c4a425d3c0e3b8f797c4690c3bf399acd57a",
+                "sequence": 12,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:16:39Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/13"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/13/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/13/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/13/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/13/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "1d9c4d42ea0b94b95c00778d551ecd4069a0593e9910ccdd4df20a4829dfaf65",
+                "paging_token": "55834574848",
+                "hash": "1d9c4d42ea0b94b95c00778d551ecd4069a0593e9910ccdd4df20a4829dfaf65",
+                "prev_hash": "dd594fa30e56415bb5c6800ec99fc75c5c600edc169f146b3db18234fbb42d36",
+                "sequence": 13,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:16:44Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/14"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/14/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/14/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/14/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/14/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "84b69d28b6e36fffa230f1728895cd1c91204d0ef56a58859abbeaa4b884263f",
+                "paging_token": "60129542144",
+                "hash": "84b69d28b6e36fffa230f1728895cd1c91204d0ef56a58859abbeaa4b884263f",
+                "prev_hash": "1d9c4d42ea0b94b95c00778d551ecd4069a0593e9910ccdd4df20a4829dfaf65",
+                "sequence": 14,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:16:49Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/15"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/15/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/15/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/15/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/15/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "651be0f545a73b1da2a8c0a2b440da6fc1590aa954a6690584a7ffff2bb4b305",
+                "paging_token": "64424509440",
+                "hash": "651be0f545a73b1da2a8c0a2b440da6fc1590aa954a6690584a7ffff2bb4b305",
+                "prev_hash": "84b69d28b6e36fffa230f1728895cd1c91204d0ef56a58859abbeaa4b884263f",
+                "sequence": 15,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:16:54Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/16"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/16/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/16/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/16/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/16/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "a55cd4c5763873567ae638bf15395476fc5061513b1004e3d9b8ba594c16897d",
+                "paging_token": "68719476736",
+                "hash": "a55cd4c5763873567ae638bf15395476fc5061513b1004e3d9b8ba594c16897d",
+                "prev_hash": "651be0f545a73b1da2a8c0a2b440da6fc1590aa954a6690584a7ffff2bb4b305",
+                "sequence": 16,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:16:59Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/17"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/17/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/17/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/17/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/17/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "12df9f191c75fd239c36904808ecea949af16c81d5f3977e126828a3cc76f2ac",
+                "paging_token": "73014444032",
+                "hash": "12df9f191c75fd239c36904808ecea949af16c81d5f3977e126828a3cc76f2ac",
+                "prev_hash": "a55cd4c5763873567ae638bf15395476fc5061513b1004e3d9b8ba594c16897d",
+                "sequence": 17,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:17:04Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/18"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/18/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/18/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/18/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/18/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "d93c96b1591f8f3cf3d4fb52e2ec7715e8fe7b2f1d9c6fb4d15738e7757cc7cf",
+                "paging_token": "77309411328",
+                "hash": "d93c96b1591f8f3cf3d4fb52e2ec7715e8fe7b2f1d9c6fb4d15738e7757cc7cf",
+                "prev_hash": "12df9f191c75fd239c36904808ecea949af16c81d5f3977e126828a3cc76f2ac",
+                "sequence": 18,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:17:09Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/19"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/19/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/19/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/19/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/19/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "f8558f2e9aed2500949034682989c505907fccd9704095324942d99bd8344c4d",
+                "paging_token": "81604378624",
+                "hash": "f8558f2e9aed2500949034682989c505907fccd9704095324942d99bd8344c4d",
+                "prev_hash": "d93c96b1591f8f3cf3d4fb52e2ec7715e8fe7b2f1d9c6fb4d15738e7757cc7cf",
+                "sequence": 19,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:17:14Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/20"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/20/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/20/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/20/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/20/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "47cc6fa49769a6c806ef8c0c0efadd572f3843171561e9cb6adc5c3f7daff10c",
+                "paging_token": "85899345920",
+                "hash": "47cc6fa49769a6c806ef8c0c0efadd572f3843171561e9cb6adc5c3f7daff10c",
+                "prev_hash": "f8558f2e9aed2500949034682989c505907fccd9704095324942d99bd8344c4d",
+                "sequence": 20,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:17:19Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/21"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/21/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/21/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/21/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/21/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "4a11a889455d323a6e20faba06feedec83d9c6a8d1b8479c36cd9c4d7e4fbda1",
+                "paging_token": "90194313216",
+                "hash": "4a11a889455d323a6e20faba06feedec83d9c6a8d1b8479c36cd9c4d7e4fbda1",
+                "prev_hash": "47cc6fa49769a6c806ef8c0c0efadd572f3843171561e9cb6adc5c3f7daff10c",
+                "sequence": 21,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:17:24Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/22"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/22/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/22/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/22/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/22/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "760ffeee0f14692976cd6b3caec7f1cc261962c657777fb6d52892da17e66dbb",
+                "paging_token": "94489280512",
+                "hash": "760ffeee0f14692976cd6b3caec7f1cc261962c657777fb6d52892da17e66dbb",
+                "prev_hash": "4a11a889455d323a6e20faba06feedec83d9c6a8d1b8479c36cd9c4d7e4fbda1",
+                "sequence": 22,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:17:29Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/23"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/23/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/23/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/23/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/23/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "19995dc7015a69a079799e93fd84e9d1d824727a95f014276a8cf0884910835b",
+                "paging_token": "98784247808",
+                "hash": "19995dc7015a69a079799e93fd84e9d1d824727a95f014276a8cf0884910835b",
+                "prev_hash": "760ffeee0f14692976cd6b3caec7f1cc261962c657777fb6d52892da17e66dbb",
+                "sequence": 23,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:17:34Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/24"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/24/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/24/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/24/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/24/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "0c272de030e9f5f755a9e1d992125d9597ba538e29dea52ced4b194f910c9769",
+                "paging_token": "103079215104",
+                "hash": "0c272de030e9f5f755a9e1d992125d9597ba538e29dea52ced4b194f910c9769",
+                "prev_hash": "19995dc7015a69a079799e93fd84e9d1d824727a95f014276a8cf0884910835b",
+                "sequence": 24,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:17:39Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/25"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/25/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/25/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/25/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/25/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "03973e309c329f3dbd36c1c247ef746ebfaca5b5bff7bee9d48f22100e180c2a",
+                "paging_token": "107374182400",
+                "hash": "03973e309c329f3dbd36c1c247ef746ebfaca5b5bff7bee9d48f22100e180c2a",
+                "prev_hash": "0c272de030e9f5f755a9e1d992125d9597ba538e29dea52ced4b194f910c9769",
+                "sequence": 25,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:17:44Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/26"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/26/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/26/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/26/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/26/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "e0f2327ceb2d7bdf5f32e4ba6a4755bdc48c898b5b1317b322cfbbe1401fe7e3",
+                "paging_token": "111669149696",
+                "hash": "e0f2327ceb2d7bdf5f32e4ba6a4755bdc48c898b5b1317b322cfbbe1401fe7e3",
+                "prev_hash": "03973e309c329f3dbd36c1c247ef746ebfaca5b5bff7bee9d48f22100e180c2a",
+                "sequence": 26,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:17:49Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/27"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/27/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/27/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/27/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/27/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "fac41dc6ab5715f7cafb3ea422d60598429e5546a5d290a4d5a1350c5dece9cf",
+                "paging_token": "115964116992",
+                "hash": "fac41dc6ab5715f7cafb3ea422d60598429e5546a5d290a4d5a1350c5dece9cf",
+                "prev_hash": "e0f2327ceb2d7bdf5f32e4ba6a4755bdc48c898b5b1317b322cfbbe1401fe7e3",
+                "sequence": 27,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:17:54Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/28"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/28/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/28/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/28/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/28/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "52be8675aa789f2a1d46465dfdbc3a73567e252c34cf14a4b2c4f7ed38f46eaa",
+                "paging_token": "120259084288",
+                "hash": "52be8675aa789f2a1d46465dfdbc3a73567e252c34cf14a4b2c4f7ed38f46eaa",
+                "prev_hash": "fac41dc6ab5715f7cafb3ea422d60598429e5546a5d290a4d5a1350c5dece9cf",
+                "sequence": 28,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:17:59Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/29"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/29/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/29/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/29/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/29/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "8227c84d8ebc29fdeb3c87f37a10cebfba55a9ea8f8629cb8e546a19a2ea474e",
+                "paging_token": "124554051584",
+                "hash": "8227c84d8ebc29fdeb3c87f37a10cebfba55a9ea8f8629cb8e546a19a2ea474e",
+                "prev_hash": "52be8675aa789f2a1d46465dfdbc3a73567e252c34cf14a4b2c4f7ed38f46eaa",
+                "sequence": 29,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:18:04Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/30"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/30/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/30/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/30/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/30/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "b6a212a506ac30e11d54553a9488f78c73acb02a1ae49fdf5bcbf4a48e98d14a",
+                "paging_token": "128849018880",
+                "hash": "b6a212a506ac30e11d54553a9488f78c73acb02a1ae49fdf5bcbf4a48e98d14a",
+                "prev_hash": "8227c84d8ebc29fdeb3c87f37a10cebfba55a9ea8f8629cb8e546a19a2ea474e",
+                "sequence": 30,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:18:09Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/31"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/31/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/31/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/31/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/31/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "d1fd28ae384d7274dfc707b5f0484fc9d15f6e2031b0ee66d62d3c65525b4832",
+                "paging_token": "133143986176",
+                "hash": "d1fd28ae384d7274dfc707b5f0484fc9d15f6e2031b0ee66d62d3c65525b4832",
+                "prev_hash": "b6a212a506ac30e11d54553a9488f78c73acb02a1ae49fdf5bcbf4a48e98d14a",
+                "sequence": 31,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:18:14Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/32"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/32/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/32/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/32/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/32/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "687cf2e933f31bd61d7195c2fe0982ef871dfd3c406e5315626978eb537da3f1",
+                "paging_token": "137438953472",
+                "hash": "687cf2e933f31bd61d7195c2fe0982ef871dfd3c406e5315626978eb537da3f1",
+                "prev_hash": "d1fd28ae384d7274dfc707b5f0484fc9d15f6e2031b0ee66d62d3c65525b4832",
+                "sequence": 32,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:18:19Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/33"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/33/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/33/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/33/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/33/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "009e237231db0885163e46413a30b00ac811868718d12c25a64a86f9ab219581",
+                "paging_token": "141733920768",
+                "hash": "009e237231db0885163e46413a30b00ac811868718d12c25a64a86f9ab219581",
+                "prev_hash": "687cf2e933f31bd61d7195c2fe0982ef871dfd3c406e5315626978eb537da3f1",
+                "sequence": 33,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:18:24Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/34"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/34/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/34/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/34/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/34/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "17aab9c3a7474cebf2af6e93eb86da6b476789031b05f689f2441683a82485cc",
+                "paging_token": "146028888064",
+                "hash": "17aab9c3a7474cebf2af6e93eb86da6b476789031b05f689f2441683a82485cc",
+                "prev_hash": "009e237231db0885163e46413a30b00ac811868718d12c25a64a86f9ab219581",
+                "sequence": 34,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:18:29Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/35"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/35/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/35/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/35/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/35/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "4c816bd988de83c3272fbfa42341897d002dd2609858321eb1d59f08bd19fb2f",
+                "paging_token": "150323855360",
+                "hash": "4c816bd988de83c3272fbfa42341897d002dd2609858321eb1d59f08bd19fb2f",
+                "prev_hash": "17aab9c3a7474cebf2af6e93eb86da6b476789031b05f689f2441683a82485cc",
+                "sequence": 35,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:18:34Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/36"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/36/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/36/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/36/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/36/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "9cc42a2c8a5ffa685a586053112e5f267d235fbb94342cce8e693c84b78adf24",
+                "paging_token": "154618822656",
+                "hash": "9cc42a2c8a5ffa685a586053112e5f267d235fbb94342cce8e693c84b78adf24",
+                "prev_hash": "4c816bd988de83c3272fbfa42341897d002dd2609858321eb1d59f08bd19fb2f",
+                "sequence": 36,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:18:39Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/37"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/37/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/37/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/37/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/37/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "ef8530944ee35c593c75ba31069eea74cfa8af7feea8d7f89b62ac3445945418",
+                "paging_token": "158913789952",
+                "hash": "ef8530944ee35c593c75ba31069eea74cfa8af7feea8d7f89b62ac3445945418",
+                "prev_hash": "9cc42a2c8a5ffa685a586053112e5f267d235fbb94342cce8e693c84b78adf24",
+                "sequence": 37,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:18:44Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/38"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/38/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/38/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/38/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/38/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "db0c00aa160f61c0fe62452af530d9824fa6034d36414a673ed3db47efbfb932",
+                "paging_token": "163208757248",
+                "hash": "db0c00aa160f61c0fe62452af530d9824fa6034d36414a673ed3db47efbfb932",
+                "prev_hash": "ef8530944ee35c593c75ba31069eea74cfa8af7feea8d7f89b62ac3445945418",
+                "sequence": 38,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:18:49Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/39"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/39/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/39/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/39/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/39/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "21a19a22e345292cd076800acd6bc76da3f902598e9df3d9f622afe46494d53f",
+                "paging_token": "167503724544",
+                "hash": "21a19a22e345292cd076800acd6bc76da3f902598e9df3d9f622afe46494d53f",
+                "prev_hash": "db0c00aa160f61c0fe62452af530d9824fa6034d36414a673ed3db47efbfb932",
+                "sequence": 39,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:18:54Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/40"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/40/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/40/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/40/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/40/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "ff28d274aa91162d812ea9abdaddbb67fffe3a9aed6df2130500d7fabf2be9e8",
+                "paging_token": "171798691840",
+                "hash": "ff28d274aa91162d812ea9abdaddbb67fffe3a9aed6df2130500d7fabf2be9e8",
+                "prev_hash": "21a19a22e345292cd076800acd6bc76da3f902598e9df3d9f622afe46494d53f",
+                "sequence": 40,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:18:59Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/41"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/41/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/41/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/41/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/41/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "6b2e8cdc3b305656d5ccb6f964113d8438cae3eb238fc9c5ee7ce9b819843d30",
+                "paging_token": "176093659136",
+                "hash": "6b2e8cdc3b305656d5ccb6f964113d8438cae3eb238fc9c5ee7ce9b819843d30",
+                "prev_hash": "ff28d274aa91162d812ea9abdaddbb67fffe3a9aed6df2130500d7fabf2be9e8",
+                "sequence": 41,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:19:04Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/42"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/42/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/42/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/42/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/42/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "b768e0b6c174b7481ce17c70271ba7ca016b16f3f3c2b73948f3b55945d81762",
+                "paging_token": "180388626432",
+                "hash": "b768e0b6c174b7481ce17c70271ba7ca016b16f3f3c2b73948f3b55945d81762",
+                "prev_hash": "6b2e8cdc3b305656d5ccb6f964113d8438cae3eb238fc9c5ee7ce9b819843d30",
+                "sequence": 42,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:19:09Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/43"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/43/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/43/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/43/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/43/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "3efbd8bdd066d57c875b9f7dbd45a465b10b1778da1d761782ce89349f9ab3fc",
+                "paging_token": "184683593728",
+                "hash": "3efbd8bdd066d57c875b9f7dbd45a465b10b1778da1d761782ce89349f9ab3fc",
+                "prev_hash": "b768e0b6c174b7481ce17c70271ba7ca016b16f3f3c2b73948f3b55945d81762",
+                "sequence": 43,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:19:14Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/44"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/44/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/44/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/44/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/44/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "2de318e637c641b9d5781709d4cea4bf86b17acd1e6988afd52e642ce242ac37",
+                "paging_token": "188978561024",
+                "hash": "2de318e637c641b9d5781709d4cea4bf86b17acd1e6988afd52e642ce242ac37",
+                "prev_hash": "3efbd8bdd066d57c875b9f7dbd45a465b10b1778da1d761782ce89349f9ab3fc",
+                "sequence": 44,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:19:19Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/45"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/45/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/45/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/45/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/45/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "312ab74aa283605c32ff57cca5286f92eac305f273604141d85f7080311728dd",
+                "paging_token": "193273528320",
+                "hash": "312ab74aa283605c32ff57cca5286f92eac305f273604141d85f7080311728dd",
+                "prev_hash": "2de318e637c641b9d5781709d4cea4bf86b17acd1e6988afd52e642ce242ac37",
+                "sequence": 45,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:19:24Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/46"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/46/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/46/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/46/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/46/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "60389ac9b9120b75142f46a885c1513b9c0ea11276faf0ec4e9b843d29fc0ced",
+                "paging_token": "197568495616",
+                "hash": "60389ac9b9120b75142f46a885c1513b9c0ea11276faf0ec4e9b843d29fc0ced",
+                "prev_hash": "312ab74aa283605c32ff57cca5286f92eac305f273604141d85f7080311728dd",
+                "sequence": 46,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:19:29Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/47"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/47/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/47/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/47/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/47/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "41fefb58711223cc492d58271fc48fe83203cc556a04668b532f70f312311ebb",
+                "paging_token": "201863462912",
+                "hash": "41fefb58711223cc492d58271fc48fe83203cc556a04668b532f70f312311ebb",
+                "prev_hash": "60389ac9b9120b75142f46a885c1513b9c0ea11276faf0ec4e9b843d29fc0ced",
+                "sequence": 47,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:19:34Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/48"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/48/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/48/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/48/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/48/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "4df3a7a69b4eb8825a7cd9e287c01603f8d7a44a44bf15cf11d0a131e40016b5",
+                "paging_token": "206158430208",
+                "hash": "4df3a7a69b4eb8825a7cd9e287c01603f8d7a44a44bf15cf11d0a131e40016b5",
+                "prev_hash": "41fefb58711223cc492d58271fc48fe83203cc556a04668b532f70f312311ebb",
+                "sequence": 48,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:19:39Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/49"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/49/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/49/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/49/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/49/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "5fd1dbf6dc6d9487a808baaf6b64fc2e861cbfec6189b91d84d9f7b43d0ff648",
+                "paging_token": "210453397504",
+                "hash": "5fd1dbf6dc6d9487a808baaf6b64fc2e861cbfec6189b91d84d9f7b43d0ff648",
+                "prev_hash": "4df3a7a69b4eb8825a7cd9e287c01603f8d7a44a44bf15cf11d0a131e40016b5",
+                "sequence": 49,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:19:44Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/50"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/50/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/50/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/50/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/50/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "335ad8b90a7c2e977c541251d665bf1f19aacccbaeab116e3d2cd81767f8e533",
+                "paging_token": "214748364800",
+                "hash": "335ad8b90a7c2e977c541251d665bf1f19aacccbaeab116e3d2cd81767f8e533",
+                "prev_hash": "5fd1dbf6dc6d9487a808baaf6b64fc2e861cbfec6189b91d84d9f7b43d0ff648",
+                "sequence": 50,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:19:49Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/51"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/51/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/51/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/51/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/51/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "1fea31561edd9eef256fa606107bdfed2ad7cbe929c686a7cea77c24e6c8d8ff",
+                "paging_token": "219043332096",
+                "hash": "1fea31561edd9eef256fa606107bdfed2ad7cbe929c686a7cea77c24e6c8d8ff",
+                "prev_hash": "335ad8b90a7c2e977c541251d665bf1f19aacccbaeab116e3d2cd81767f8e533",
+                "sequence": 51,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:19:54Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/52"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/52/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/52/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/52/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/52/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "07c27e3b1994adfa8db2b28f4a2ac123922703361f9a48e00474fdad491dad36",
+                "paging_token": "223338299392",
+                "hash": "07c27e3b1994adfa8db2b28f4a2ac123922703361f9a48e00474fdad491dad36",
+                "prev_hash": "1fea31561edd9eef256fa606107bdfed2ad7cbe929c686a7cea77c24e6c8d8ff",
+                "sequence": 52,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:19:59Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/53"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/53/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/53/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/53/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/53/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "3437b83f8f4433b6ba0d9be9c15efd10f6b48b202b7313c7236804a3c5ecd581",
+                "paging_token": "227633266688",
+                "hash": "3437b83f8f4433b6ba0d9be9c15efd10f6b48b202b7313c7236804a3c5ecd581",
+                "prev_hash": "07c27e3b1994adfa8db2b28f4a2ac123922703361f9a48e00474fdad491dad36",
+                "sequence": 53,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:20:04Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/54"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/54/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/54/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/54/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/54/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "c07646238214b630db83e1a44fa053ef48c3323c389d5f99db18a06ba7749183",
+                "paging_token": "231928233984",
+                "hash": "c07646238214b630db83e1a44fa053ef48c3323c389d5f99db18a06ba7749183",
+                "prev_hash": "3437b83f8f4433b6ba0d9be9c15efd10f6b48b202b7313c7236804a3c5ecd581",
+                "sequence": 54,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:20:09Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/55"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/55/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/55/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/55/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/55/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "1bbe1f2f76e2497a17336e4941d920750e671d9c14f183d2d50e5b1b5259c10f",
+                "paging_token": "236223201280",
+                "hash": "1bbe1f2f76e2497a17336e4941d920750e671d9c14f183d2d50e5b1b5259c10f",
+                "prev_hash": "c07646238214b630db83e1a44fa053ef48c3323c389d5f99db18a06ba7749183",
+                "sequence": 55,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:20:14Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/56"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/56/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/56/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/56/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/56/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "4901cc7254b08d799ab89faeb378022dfeed867cb16b222997b05c18ef3a8319",
+                "paging_token": "240518168576",
+                "hash": "4901cc7254b08d799ab89faeb378022dfeed867cb16b222997b05c18ef3a8319",
+                "prev_hash": "1bbe1f2f76e2497a17336e4941d920750e671d9c14f183d2d50e5b1b5259c10f",
+                "sequence": 56,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:20:19Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/57"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/57/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/57/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/57/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/57/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "6669f311f66b9c1aaadaf02927504b51016a37934620f0684d30ef04ad310915",
+                "paging_token": "244813135872",
+                "hash": "6669f311f66b9c1aaadaf02927504b51016a37934620f0684d30ef04ad310915",
+                "prev_hash": "4901cc7254b08d799ab89faeb378022dfeed867cb16b222997b05c18ef3a8319",
+                "sequence": 57,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:20:24Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/58"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/58/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/58/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/58/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/58/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "a1250297ef319cd963e8044fe6ef3e0eb6060839758dc821629fff020adcad79",
+                "paging_token": "249108103168",
+                "hash": "a1250297ef319cd963e8044fe6ef3e0eb6060839758dc821629fff020adcad79",
+                "prev_hash": "6669f311f66b9c1aaadaf02927504b51016a37934620f0684d30ef04ad310915",
+                "sequence": 58,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:20:29Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/59"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/59/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/59/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/59/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/59/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "abaaf05d49a45911838d21a16a364aa0e29f2907a8d96a4d100bad5eae8456fc",
+                "paging_token": "253403070464",
+                "hash": "abaaf05d49a45911838d21a16a364aa0e29f2907a8d96a4d100bad5eae8456fc",
+                "prev_hash": "a1250297ef319cd963e8044fe6ef3e0eb6060839758dc821629fff020adcad79",
+                "sequence": 59,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:20:34Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/60"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/60/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/60/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/60/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/60/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "41186e7659f09fb1bb657a4b8b3ca06c590e0320c77491470a6313d421e6fc57",
+                "paging_token": "257698037760",
+                "hash": "41186e7659f09fb1bb657a4b8b3ca06c590e0320c77491470a6313d421e6fc57",
+                "prev_hash": "abaaf05d49a45911838d21a16a364aa0e29f2907a8d96a4d100bad5eae8456fc",
+                "sequence": 60,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:20:39Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/61"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/61/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/61/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/61/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/61/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "c5070c20f6fae0bf3cf55bfd6ac3647be6b824e03af30b19e6ead45d927c0d11",
+                "paging_token": "261993005056",
+                "hash": "c5070c20f6fae0bf3cf55bfd6ac3647be6b824e03af30b19e6ead45d927c0d11",
+                "prev_hash": "41186e7659f09fb1bb657a4b8b3ca06c590e0320c77491470a6313d421e6fc57",
+                "sequence": 61,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:20:44Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/62"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/62/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/62/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/62/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/62/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "d7c8d40a086e1c3685427c1999648b95101d2c73b9496ef3169a488fc74d9ac7",
+                "paging_token": "266287972352",
+                "hash": "d7c8d40a086e1c3685427c1999648b95101d2c73b9496ef3169a488fc74d9ac7",
+                "prev_hash": "c5070c20f6fae0bf3cf55bfd6ac3647be6b824e03af30b19e6ead45d927c0d11",
+                "sequence": 62,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:20:49Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/63"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/63/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/63/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/63/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/63/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "c03f11ed5f206aafc5a714b0ef14fac0e5012ba545a060f443efb28c50130d1b",
+                "paging_token": "270582939648",
+                "hash": "c03f11ed5f206aafc5a714b0ef14fac0e5012ba545a060f443efb28c50130d1b",
+                "prev_hash": "d7c8d40a086e1c3685427c1999648b95101d2c73b9496ef3169a488fc74d9ac7",
+                "sequence": 63,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:20:54Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/64"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/64/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/64/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/64/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/64/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "068096c1c56b8e7caf9646d942345f90d1898a70025f001b7ed61fd04b1359ba",
+                "paging_token": "274877906944",
+                "hash": "068096c1c56b8e7caf9646d942345f90d1898a70025f001b7ed61fd04b1359ba",
+                "prev_hash": "c03f11ed5f206aafc5a714b0ef14fac0e5012ba545a060f443efb28c50130d1b",
+                "sequence": 64,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:20:59Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/65"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/65/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/65/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/65/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/65/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "faf5a612481740b0dc4702bf4be348b92968fc0867b280a172a249736b6e2543",
+                "paging_token": "279172874240",
+                "hash": "faf5a612481740b0dc4702bf4be348b92968fc0867b280a172a249736b6e2543",
+                "prev_hash": "068096c1c56b8e7caf9646d942345f90d1898a70025f001b7ed61fd04b1359ba",
+                "sequence": 65,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:21:04Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/66"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/66/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/66/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/66/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/66/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "2fe30ace0c5358e88333e0e5d5430ae6f9d6f1d03e91c3a62e6fbbfab6c0596f",
+                "paging_token": "283467841536",
+                "hash": "2fe30ace0c5358e88333e0e5d5430ae6f9d6f1d03e91c3a62e6fbbfab6c0596f",
+                "prev_hash": "faf5a612481740b0dc4702bf4be348b92968fc0867b280a172a249736b6e2543",
+                "sequence": 66,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:21:09Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/67"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/67/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/67/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/67/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/67/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "445fa8dfc26bd3a3580f38363f7305c13903c61918c01b1ccf59bc07d78469fd",
+                "paging_token": "287762808832",
+                "hash": "445fa8dfc26bd3a3580f38363f7305c13903c61918c01b1ccf59bc07d78469fd",
+                "prev_hash": "2fe30ace0c5358e88333e0e5d5430ae6f9d6f1d03e91c3a62e6fbbfab6c0596f",
+                "sequence": 67,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:21:14Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/68"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/68/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/68/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/68/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/68/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "f46df78a69a06d559f5561a04a4e934406f55a677d4c99dae815f9bcceaf1085",
+                "paging_token": "292057776128",
+                "hash": "f46df78a69a06d559f5561a04a4e934406f55a677d4c99dae815f9bcceaf1085",
+                "prev_hash": "445fa8dfc26bd3a3580f38363f7305c13903c61918c01b1ccf59bc07d78469fd",
+                "sequence": 68,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:21:19Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/69"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/69/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/69/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/69/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/69/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "2b0c71ea442b74c5e76485a98c6e681cc86573d07190468edf5319be2c48aa0d",
+                "paging_token": "296352743424",
+                "hash": "2b0c71ea442b74c5e76485a98c6e681cc86573d07190468edf5319be2c48aa0d",
+                "prev_hash": "f46df78a69a06d559f5561a04a4e934406f55a677d4c99dae815f9bcceaf1085",
+                "sequence": 69,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:21:24Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/70"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/70/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/70/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/70/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/70/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "6ef266f7b6689635af6abdd256f4ae41ffb8faa4dabcbf5133a06d417e221053",
+                "paging_token": "300647710720",
+                "hash": "6ef266f7b6689635af6abdd256f4ae41ffb8faa4dabcbf5133a06d417e221053",
+                "prev_hash": "2b0c71ea442b74c5e76485a98c6e681cc86573d07190468edf5319be2c48aa0d",
+                "sequence": 70,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:21:29Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/71"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/71/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/71/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/71/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/71/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "2f70823495a295e291ee42e128078d98f187f1dfe6fd5adc84fb188f737c2829",
+                "paging_token": "304942678016",
+                "hash": "2f70823495a295e291ee42e128078d98f187f1dfe6fd5adc84fb188f737c2829",
+                "prev_hash": "6ef266f7b6689635af6abdd256f4ae41ffb8faa4dabcbf5133a06d417e221053",
+                "sequence": 71,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:21:34Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/72"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/72/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/72/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/72/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/72/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "472bc5f67dcafa5789f9a80e10fbd0194f1d73b25b1b045904b77a33627554a6",
+                "paging_token": "309237645312",
+                "hash": "472bc5f67dcafa5789f9a80e10fbd0194f1d73b25b1b045904b77a33627554a6",
+                "prev_hash": "2f70823495a295e291ee42e128078d98f187f1dfe6fd5adc84fb188f737c2829",
+                "sequence": 72,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:21:39Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/73"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/73/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/73/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/73/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/73/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "9d89c24e527dd3eff3d86f52be561184d39813c2eb6f46dd4765d222b5655996",
+                "paging_token": "313532612608",
+                "hash": "9d89c24e527dd3eff3d86f52be561184d39813c2eb6f46dd4765d222b5655996",
+                "prev_hash": "472bc5f67dcafa5789f9a80e10fbd0194f1d73b25b1b045904b77a33627554a6",
+                "sequence": 73,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:21:44Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/74"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/74/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/74/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/74/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/74/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "a30888890b6a5bad13778f26238f1a72403bbfefcbdf80f0efcc3400bb1d46f3",
+                "paging_token": "317827579904",
+                "hash": "a30888890b6a5bad13778f26238f1a72403bbfefcbdf80f0efcc3400bb1d46f3",
+                "prev_hash": "9d89c24e527dd3eff3d86f52be561184d39813c2eb6f46dd4765d222b5655996",
+                "sequence": 74,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:21:49Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/75"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/75/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/75/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/75/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/75/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "5ba7e06cb284f771cc4542df2689ff38e5ba287eccb0e62aff6f2e976c0a2a7c",
+                "paging_token": "322122547200",
+                "hash": "5ba7e06cb284f771cc4542df2689ff38e5ba287eccb0e62aff6f2e976c0a2a7c",
+                "prev_hash": "a30888890b6a5bad13778f26238f1a72403bbfefcbdf80f0efcc3400bb1d46f3",
+                "sequence": 75,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:21:54Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/76"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/76/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/76/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/76/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/76/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "eea6b2214afde9865cd93f4ff71d9b09019bee27271a020a4842109b24fe7ca9",
+                "paging_token": "326417514496",
+                "hash": "eea6b2214afde9865cd93f4ff71d9b09019bee27271a020a4842109b24fe7ca9",
+                "prev_hash": "5ba7e06cb284f771cc4542df2689ff38e5ba287eccb0e62aff6f2e976c0a2a7c",
+                "sequence": 76,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:21:59Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/77"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/77/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/77/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/77/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/77/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "64a21dadee7dfc032fee7a87dfa665195f85022abce458b8758655294d13d9fe",
+                "paging_token": "330712481792",
+                "hash": "64a21dadee7dfc032fee7a87dfa665195f85022abce458b8758655294d13d9fe",
+                "prev_hash": "eea6b2214afde9865cd93f4ff71d9b09019bee27271a020a4842109b24fe7ca9",
+                "sequence": 77,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:22:04Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/78"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/78/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/78/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/78/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/78/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "009d4abd0b191aad8b2f4584f710820a7b55168f916842e0722d9f18c5e6a14d",
+                "paging_token": "335007449088",
+                "hash": "009d4abd0b191aad8b2f4584f710820a7b55168f916842e0722d9f18c5e6a14d",
+                "prev_hash": "64a21dadee7dfc032fee7a87dfa665195f85022abce458b8758655294d13d9fe",
+                "sequence": 78,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:22:09Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/79"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/79/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/79/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/79/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/79/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "e6241790fb99b86f605517cf5e321cba85bc8e42cb1e810a9e1c3575e14dc983",
+                "paging_token": "339302416384",
+                "hash": "e6241790fb99b86f605517cf5e321cba85bc8e42cb1e810a9e1c3575e14dc983",
+                "prev_hash": "009d4abd0b191aad8b2f4584f710820a7b55168f916842e0722d9f18c5e6a14d",
+                "sequence": 79,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:22:14Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/80"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/80/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/80/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/80/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/80/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "cf3cb78837f32d957021604a27ca648579e6557aa996305f58af72a566a9b53b",
+                "paging_token": "343597383680",
+                "hash": "cf3cb78837f32d957021604a27ca648579e6557aa996305f58af72a566a9b53b",
+                "prev_hash": "e6241790fb99b86f605517cf5e321cba85bc8e42cb1e810a9e1c3575e14dc983",
+                "sequence": 80,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:22:19Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/81"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/81/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/81/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/81/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/81/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "5f99f818daec4d9328a0ae62689703566ff8aaa2d28208f21d075c9603b950fa",
+                "paging_token": "347892350976",
+                "hash": "5f99f818daec4d9328a0ae62689703566ff8aaa2d28208f21d075c9603b950fa",
+                "prev_hash": "cf3cb78837f32d957021604a27ca648579e6557aa996305f58af72a566a9b53b",
+                "sequence": 81,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:22:24Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/82"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/82/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/82/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/82/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/82/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "7a9f97c94767676523a1822553a24790857b0e47993e2cebc1c1bf89f4cfcff2",
+                "paging_token": "352187318272",
+                "hash": "7a9f97c94767676523a1822553a24790857b0e47993e2cebc1c1bf89f4cfcff2",
+                "prev_hash": "5f99f818daec4d9328a0ae62689703566ff8aaa2d28208f21d075c9603b950fa",
+                "sequence": 82,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:22:29Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/83"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/83/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/83/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/83/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/83/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "a222df957f0daf5b788c8414cc8f39e790ac5eb8dfe57e94fdb42d5263871e7f",
+                "paging_token": "356482285568",
+                "hash": "a222df957f0daf5b788c8414cc8f39e790ac5eb8dfe57e94fdb42d5263871e7f",
+                "prev_hash": "7a9f97c94767676523a1822553a24790857b0e47993e2cebc1c1bf89f4cfcff2",
+                "sequence": 83,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:22:34Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/84"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/84/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/84/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/84/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/84/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "34b266b3326b00c8800e1fde21c36ac77191d08801fc0258035a27b92c1a97be",
+                "paging_token": "360777252864",
+                "hash": "34b266b3326b00c8800e1fde21c36ac77191d08801fc0258035a27b92c1a97be",
+                "prev_hash": "a222df957f0daf5b788c8414cc8f39e790ac5eb8dfe57e94fdb42d5263871e7f",
+                "sequence": 84,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:22:39Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/85"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/85/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/85/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/85/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/85/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "28434a20eb336af08cab0689f8cf2fdd36dd3e81f4a1fafac62d2397b7a01daf",
+                "paging_token": "365072220160",
+                "hash": "28434a20eb336af08cab0689f8cf2fdd36dd3e81f4a1fafac62d2397b7a01daf",
+                "prev_hash": "34b266b3326b00c8800e1fde21c36ac77191d08801fc0258035a27b92c1a97be",
+                "sequence": 85,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:22:44Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/86"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/86/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/86/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/86/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/86/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "4b2015beb01a928367f6d50515ca20e98aa294b68c75db710484039373ce814d",
+                "paging_token": "369367187456",
+                "hash": "4b2015beb01a928367f6d50515ca20e98aa294b68c75db710484039373ce814d",
+                "prev_hash": "28434a20eb336af08cab0689f8cf2fdd36dd3e81f4a1fafac62d2397b7a01daf",
+                "sequence": 86,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:22:49Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/87"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/87/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/87/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/87/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/87/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "89d21280e276d5da9258b6a165fe799dbc362c5d3a2c13b44d984c23ff33bc56",
+                "paging_token": "373662154752",
+                "hash": "89d21280e276d5da9258b6a165fe799dbc362c5d3a2c13b44d984c23ff33bc56",
+                "prev_hash": "4b2015beb01a928367f6d50515ca20e98aa294b68c75db710484039373ce814d",
+                "sequence": 87,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:22:54Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/88"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/88/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/88/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/88/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/88/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "06c0466d22f2c5e23eab7aaf7768d92abc68874606633b1f701bdd24ec5b4f8b",
+                "paging_token": "377957122048",
+                "hash": "06c0466d22f2c5e23eab7aaf7768d92abc68874606633b1f701bdd24ec5b4f8b",
+                "prev_hash": "89d21280e276d5da9258b6a165fe799dbc362c5d3a2c13b44d984c23ff33bc56",
+                "sequence": 88,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:22:59Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/89"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/89/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/89/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/89/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/89/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "4d1c79ec0577fbb4057dd71755847bd284239a087e6871eccd8ff3f87b402f28",
+                "paging_token": "382252089344",
+                "hash": "4d1c79ec0577fbb4057dd71755847bd284239a087e6871eccd8ff3f87b402f28",
+                "prev_hash": "06c0466d22f2c5e23eab7aaf7768d92abc68874606633b1f701bdd24ec5b4f8b",
+                "sequence": 89,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:23:04Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/90"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/90/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/90/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/90/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/90/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "b4f6944b5569b962cbbd2fcd39236bd80795795a019ceeb52226f2d8a2861325",
+                "paging_token": "386547056640",
+                "hash": "b4f6944b5569b962cbbd2fcd39236bd80795795a019ceeb52226f2d8a2861325",
+                "prev_hash": "4d1c79ec0577fbb4057dd71755847bd284239a087e6871eccd8ff3f87b402f28",
+                "sequence": 90,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:23:09Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/91"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/91/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/91/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/91/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/91/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "d7a0b4dc1c27d10fea971957ef5449d583e723b26db190eca6e944480f5cf154",
+                "paging_token": "390842023936",
+                "hash": "d7a0b4dc1c27d10fea971957ef5449d583e723b26db190eca6e944480f5cf154",
+                "prev_hash": "b4f6944b5569b962cbbd2fcd39236bd80795795a019ceeb52226f2d8a2861325",
+                "sequence": 91,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:23:14Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/92"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/92/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/92/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/92/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/92/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "f74b8d7080d427ee1d8d5e50e5f59b85acddf527689a019fce6d319811762a41",
+                "paging_token": "395136991232",
+                "hash": "f74b8d7080d427ee1d8d5e50e5f59b85acddf527689a019fce6d319811762a41",
+                "prev_hash": "d7a0b4dc1c27d10fea971957ef5449d583e723b26db190eca6e944480f5cf154",
+                "sequence": 92,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:23:19Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/93"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/93/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/93/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/93/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/93/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "d2569d6a93a5d8fb20e874847359f7414a94d97933d9073681544579f6629d20",
+                "paging_token": "399431958528",
+                "hash": "d2569d6a93a5d8fb20e874847359f7414a94d97933d9073681544579f6629d20",
+                "prev_hash": "f74b8d7080d427ee1d8d5e50e5f59b85acddf527689a019fce6d319811762a41",
+                "sequence": 93,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:23:24Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/94"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/94/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/94/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/94/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/94/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "3d24d10f961396b9f9cd6bd4245c08370d2583c6452ecd20d6d28ab3554e6cfd",
+                "paging_token": "403726925824",
+                "hash": "3d24d10f961396b9f9cd6bd4245c08370d2583c6452ecd20d6d28ab3554e6cfd",
+                "prev_hash": "d2569d6a93a5d8fb20e874847359f7414a94d97933d9073681544579f6629d20",
+                "sequence": 94,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:23:29Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/95"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/95/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/95/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/95/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/95/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "911b1efe1af43c7829787221db32f85cf5d054a26601652380d5182849aa61c4",
+                "paging_token": "408021893120",
+                "hash": "911b1efe1af43c7829787221db32f85cf5d054a26601652380d5182849aa61c4",
+                "prev_hash": "3d24d10f961396b9f9cd6bd4245c08370d2583c6452ecd20d6d28ab3554e6cfd",
+                "sequence": 95,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:23:34Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/96"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/96/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/96/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/96/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/96/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "7ed1416c15da9f0df619d479f146b8e2f32f7ba5d0c76496b9252256069d69ec",
+                "paging_token": "412316860416",
+                "hash": "7ed1416c15da9f0df619d479f146b8e2f32f7ba5d0c76496b9252256069d69ec",
+                "prev_hash": "911b1efe1af43c7829787221db32f85cf5d054a26601652380d5182849aa61c4",
+                "sequence": 96,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:23:39Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/97"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/97/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/97/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/97/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/97/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "1ecbc705561dbbc7bdad0c9b485104e397701e4788deabd1c57ea7aeb4bae793",
+                "paging_token": "416611827712",
+                "hash": "1ecbc705561dbbc7bdad0c9b485104e397701e4788deabd1c57ea7aeb4bae793",
+                "prev_hash": "7ed1416c15da9f0df619d479f146b8e2f32f7ba5d0c76496b9252256069d69ec",
+                "sequence": 97,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:23:44Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/98"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/98/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/98/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/98/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/98/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "74d637727803b0bda1e260a5df53e7ff85eedee5fb21e8faa8e0df1a2fb56312",
+                "paging_token": "420906795008",
+                "hash": "74d637727803b0bda1e260a5df53e7ff85eedee5fb21e8faa8e0df1a2fb56312",
+                "prev_hash": "1ecbc705561dbbc7bdad0c9b485104e397701e4788deabd1c57ea7aeb4bae793",
+                "sequence": 98,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:23:49Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/99"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/99/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/99/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/99/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/99/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "e0baf9ed2a4a975a21725085ce4f1c46dba4324c81dd25261d0f19cc85e21029",
+                "paging_token": "425201762304",
+                "hash": "e0baf9ed2a4a975a21725085ce4f1c46dba4324c81dd25261d0f19cc85e21029",
+                "prev_hash": "74d637727803b0bda1e260a5df53e7ff85eedee5fb21e8faa8e0df1a2fb56312",
+                "sequence": 99,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:23:54Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/ledgers/100"
+                  },
+                  "transactions": {
+                    "href": "https://horizon.stellar.org/ledgers/100/transactions{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/ledgers/100/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "payments": {
+                    "href": "https://horizon.stellar.org/ledgers/100/payments{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/ledgers/100/effects{?cursor,limit,order}",
+                    "templated": true
+                  }
+                },
+                "id": "48cab5886627eec75c4de3132e7fd22ecd556c444ede739f4bd85fd322483003",
+                "paging_token": "429496729600",
+                "hash": "48cab5886627eec75c4de3132e7fd22ecd556c444ede739f4bd85fd322483003",
+                "prev_hash": "e0baf9ed2a4a975a21725085ce4f1c46dba4324c81dd25261d0f19cc85e21029",
+                "sequence": 100,
+                "transaction_count": 0,
+                "operation_count": 0,
+                "closed_at": "2015-09-30T17:23:59Z",
+                "total_coins": "100000000000.0000000",
+                "fee_pool": "0.0000300",
+                "base_fee": 100,
+                "base_reserve": "10.0000000",
+                "max_tx_set_size": 500
+              }
+            ]
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 08 Mar 2017 03:19:33 GMT
 recorded_with: VCR 3.0.3
