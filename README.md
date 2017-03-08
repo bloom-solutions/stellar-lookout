@@ -1,5 +1,7 @@
 # README
 
+[![Build Status](https://travis-ci.org/imacchiato/stellar_lookout.svg?branch=master)](https://travis-ci.org/imacchiato/stellar_lookout)
+
 Almost all actions in the app run in jobs. Almost all jobs are triggered by a schedue, or by other jobs, to make work more atomic.
 
 ## Jobs
