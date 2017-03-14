@@ -1,6 +1,11 @@
-process_ledgers:
-  cron: "*/10 * * * * *"
-  class: "ProcessLedgersJob"
+forward_sync_ledgers:
+  cron: "*/30 * * * * *"
+  class: "ForwardSyncLedgersJob"
+  active_job: true
+
+backward_sync_ledgers:
+  cron: "*/2 * * * *"
+  class: "BackwardSyncLedgersJob"
   active_job: true
 
 process_pending_reports:
