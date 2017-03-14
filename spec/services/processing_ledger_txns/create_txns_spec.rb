@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-module ProcessingLedgerOperations
-  RSpec.describe CreateOperations, vcr: {record: :once} do
+module ProcessingLedgerTxns
+  RSpec.describe CreateTxns, vcr: {record: :once} do
 
     let!(:ward_1) do
       create(:ward, {
@@ -12,19 +12,19 @@ module ProcessingLedgerOperations
     let!(:ledger) { create(:ledger, sequence: ledger_sequence) }
     let(:client) { InitClient.execute(ledger_sequence: ledger.sequence).client }
 
-    it "creates non-existing operations and passes work to ProcessWardOperationJob" do
-      expect(ledger.operations.count).to be_zero
+    it "creates non-existing txns" do
+      expect(ledger.txns.count).to be_zero
 
       described_class.execute(client: client, ledger_sequence: ledger_sequence)
 
-      expected_operation_ids = %w(12884905985 12884905986 12884905987)
-      expected_operations =
-        ledger.operations.where(external_id: expected_operation_ids)
-      expect(expected_operations.count).to eq 3
+      expected_txn_ids =
+        %w(3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889)
+      expected_txns = ledger.txns.where(external_id: expected_txn_ids)
+      expect(expected_txns.count).to eq 1
 
       described_class.execute(client: client, ledger_sequence: ledger_sequence)
 
-      expect(ledger.operations.count).to eq 3
+      expect(ledger.txns.count).to eq 1
     end
   end
 

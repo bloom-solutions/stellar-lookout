@@ -1,8 +1,8 @@
 FactoryGirl.define do
 
-  factory :operation do
+  factory :txn do
     sequence(:external_id) {|n| n}
-    txn
+    ledger
     body { {} }
   end
 

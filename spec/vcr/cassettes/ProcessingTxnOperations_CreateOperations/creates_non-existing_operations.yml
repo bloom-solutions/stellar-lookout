@@ -1,0 +1,330 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889/operations
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/hal+json
+      Accept:
+      - application/hal+json,application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/hal+json; charset=utf-8
+      Date:
+      - Tue, 14 Mar 2017 08:35:57 GMT
+      X-Ratelimit-Limit:
+      - '72000'
+      X-Ratelimit-Remaining:
+      - '71994'
+      X-Ratelimit-Reset:
+      - '1625'
+      Content-Length:
+      - '3819'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "_links": {
+            "self": {
+              "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889/operations?order=asc\u0026limit=10\u0026cursor="
+            },
+            "next": {
+              "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889/operations?order=asc\u0026limit=10\u0026cursor=12884905987"
+            },
+            "prev": {
+              "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889/operations?order=desc\u0026limit=10\u0026cursor=12884905985"
+            }
+          },
+          "_embedded": {
+            "records": [
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/operations/12884905985"
+                  },
+                  "transaction": {
+                    "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889"
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/operations/12884905985/effects"
+                  },
+                  "succeeds": {
+                    "href": "https://horizon.stellar.org/effects?order=desc\u0026cursor=12884905985"
+                  },
+                  "precedes": {
+                    "href": "https://horizon.stellar.org/effects?order=asc\u0026cursor=12884905985"
+                  }
+                },
+                "id": "12884905985",
+                "paging_token": "12884905985",
+                "source_account": "GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7",
+                "type": "create_account",
+                "type_i": 0,
+                "starting_balance": "20.0000000",
+                "funder": "GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7",
+                "account": "GALPCCZN4YXA3YMJHKL6CVIECKPLJJCTVMSNYWBTKJW4K5HQLYLDMZTB"
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/operations/12884905986"
+                  },
+                  "transaction": {
+                    "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889"
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/operations/12884905986/effects"
+                  },
+                  "succeeds": {
+                    "href": "https://horizon.stellar.org/effects?order=desc\u0026cursor=12884905986"
+                  },
+                  "precedes": {
+                    "href": "https://horizon.stellar.org/effects?order=asc\u0026cursor=12884905986"
+                  }
+                },
+                "id": "12884905986",
+                "paging_token": "12884905986",
+                "source_account": "GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7",
+                "type": "payment",
+                "type_i": 1,
+                "asset_type": "native",
+                "from": "GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7",
+                "to": "GALPCCZN4YXA3YMJHKL6CVIECKPLJJCTVMSNYWBTKJW4K5HQLYLDMZTB",
+                "amount": "99999999959.9999700"
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/operations/12884905987"
+                  },
+                  "transaction": {
+                    "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889"
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/operations/12884905987/effects"
+                  },
+                  "succeeds": {
+                    "href": "https://horizon.stellar.org/effects?order=desc\u0026cursor=12884905987"
+                  },
+                  "precedes": {
+                    "href": "https://horizon.stellar.org/effects?order=asc\u0026cursor=12884905987"
+                  }
+                },
+                "id": "12884905987",
+                "paging_token": "12884905987",
+                "source_account": "GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7",
+                "type": "set_options",
+                "type_i": 5,
+                "master_key_weight": 0
+              }
+            ]
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 14 Mar 2017 08:35:55 GMT
+- request:
+    method: get
+    uri: https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889/operations?cursor=&limit=10&order=asc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/hal+json
+      Accept:
+      - application/hal+json,application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/hal+json; charset=utf-8
+      Date:
+      - Tue, 14 Mar 2017 08:35:59 GMT
+      X-Ratelimit-Limit:
+      - '72000'
+      X-Ratelimit-Remaining:
+      - '71991'
+      X-Ratelimit-Reset:
+      - '1625'
+      Content-Length:
+      - '3819'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "_links": {
+            "self": {
+              "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889/operations?order=asc\u0026limit=10\u0026cursor="
+            },
+            "next": {
+              "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889/operations?order=asc\u0026limit=10\u0026cursor=12884905987"
+            },
+            "prev": {
+              "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889/operations?order=desc\u0026limit=10\u0026cursor=12884905985"
+            }
+          },
+          "_embedded": {
+            "records": [
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/operations/12884905985"
+                  },
+                  "transaction": {
+                    "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889"
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/operations/12884905985/effects"
+                  },
+                  "succeeds": {
+                    "href": "https://horizon.stellar.org/effects?order=desc\u0026cursor=12884905985"
+                  },
+                  "precedes": {
+                    "href": "https://horizon.stellar.org/effects?order=asc\u0026cursor=12884905985"
+                  }
+                },
+                "id": "12884905985",
+                "paging_token": "12884905985",
+                "source_account": "GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7",
+                "type": "create_account",
+                "type_i": 0,
+                "starting_balance": "20.0000000",
+                "funder": "GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7",
+                "account": "GALPCCZN4YXA3YMJHKL6CVIECKPLJJCTVMSNYWBTKJW4K5HQLYLDMZTB"
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/operations/12884905986"
+                  },
+                  "transaction": {
+                    "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889"
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/operations/12884905986/effects"
+                  },
+                  "succeeds": {
+                    "href": "https://horizon.stellar.org/effects?order=desc\u0026cursor=12884905986"
+                  },
+                  "precedes": {
+                    "href": "https://horizon.stellar.org/effects?order=asc\u0026cursor=12884905986"
+                  }
+                },
+                "id": "12884905986",
+                "paging_token": "12884905986",
+                "source_account": "GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7",
+                "type": "payment",
+                "type_i": 1,
+                "asset_type": "native",
+                "from": "GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7",
+                "to": "GALPCCZN4YXA3YMJHKL6CVIECKPLJJCTVMSNYWBTKJW4K5HQLYLDMZTB",
+                "amount": "99999999959.9999700"
+              },
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/operations/12884905987"
+                  },
+                  "transaction": {
+                    "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889"
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/operations/12884905987/effects"
+                  },
+                  "succeeds": {
+                    "href": "https://horizon.stellar.org/effects?order=desc\u0026cursor=12884905987"
+                  },
+                  "precedes": {
+                    "href": "https://horizon.stellar.org/effects?order=asc\u0026cursor=12884905987"
+                  }
+                },
+                "id": "12884905987",
+                "paging_token": "12884905987",
+                "source_account": "GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7",
+                "type": "set_options",
+                "type_i": 5,
+                "master_key_weight": 0
+              }
+            ]
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 14 Mar 2017 08:35:57 GMT
+- request:
+    method: get
+    uri: https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889/operations?cursor=12884905987&limit=10&order=asc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/hal+json
+      Accept:
+      - application/hal+json,application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/hal+json; charset=utf-8
+      Date:
+      - Tue, 14 Mar 2017 08:36:01 GMT
+      X-Ratelimit-Limit:
+      - '72000'
+      X-Ratelimit-Remaining:
+      - '71990'
+      X-Ratelimit-Reset:
+      - '1623'
+      Content-Length:
+      - '667'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "_links": {
+            "self": {
+              "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889/operations?order=asc\u0026limit=10\u0026cursor=12884905987"
+            },
+            "next": {
+              "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889/operations?order=asc\u0026limit=10\u0026cursor=12884905987"
+            },
+            "prev": {
+              "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889/operations?order=desc\u0026limit=10\u0026cursor=12884905987"
+            }
+          },
+          "_embedded": {
+            "records": []
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 14 Mar 2017 08:35:59 GMT
+recorded_with: VCR 3.0.3

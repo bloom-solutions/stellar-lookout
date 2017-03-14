@@ -1,8 +1,8 @@
-module ProcessingLedgerOperations
+module ProcessingTxnOperations
   class ProcessOperation
 
     extend LightService::Action
-    expects :remote_operation, :ledger_sequence
+    expects :remote_operation, :txn
 
     executed do |c|
       remote_operation = c.remote_operation
@@ -14,7 +14,7 @@ module ProcessingLedgerOperations
 
       operation = Operation.create!({
         external_id: external_id,
-        ledger_sequence: c.ledger_sequence,
+        txn_external_id: c.txn.external_id,
         body: remote_operation.to_hash,
       })
 

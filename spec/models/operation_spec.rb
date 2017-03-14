@@ -4,10 +4,14 @@ RSpec.describe Operation do
 
   describe "associations" do
     it do
-      is_expected.to belong_to(:ledger).
-        with_primary_key(:sequence).
-        with_foreign_key(:ledger_sequence)
+      is_expected.to belong_to(:txn).
+        with_primary_key(:external_id).
+        with_foreign_key(:txn_external_id)
     end
+  end
+
+  describe "delegations" do
+    it { is_expected.to delegate_method(:ledger).to(:txn) }
   end
 
   describe ".watched_by" do

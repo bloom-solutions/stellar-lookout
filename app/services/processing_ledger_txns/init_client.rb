@@ -1,4 +1,4 @@
-module ProcessingLedgerOperations
+module ProcessingLedgerTxns
   class InitClient
 
     extend LightService::Action
@@ -13,7 +13,7 @@ module ProcessingLedgerOperations
 
     def self.uri(sequence)
       uri = URI(ENV["HORIZON_URL"])
-      uri.path = "/ledgers/#{sequence}/operations"
+      uri.path = "/ledgers/#{sequence}/transactions"
       uri.to_s
     end
 

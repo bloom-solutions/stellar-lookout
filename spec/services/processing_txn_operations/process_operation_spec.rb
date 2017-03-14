@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-module ProcessingLedgerOperations
+module ProcessingTxnOperations
   RSpec.describe ProcessOperation do
-    
+
     let(:remote_operation) do
       {
         _links: {
@@ -35,15 +35,19 @@ module ProcessingLedgerOperations
     end
 
     context "remote operation exists" do
-      let!(:ledger) { create(:ledger, sequence: 3) }
+      let!(:txn) do
+        create(:txn, {
+          external_id: "3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889",
+        })
+      end
       before do
-        create(:operation, external_id: "12884905986", ledger: ledger)
+        create(:operation, external_id: "12884905986", txn: txn)
       end
 
       it "does nothing" do
         described_class.execute({
           remote_operation: remote_operation,
-          ledger_sequence: 3,
+          txn: txn,
         })
         expect(ProcessWardOperationJob).to_not have_been_enqueued
       end
@@ -55,17 +59,17 @@ module ProcessingLedgerOperations
           address: "GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7",
         })
       end
-      let!(:ward_1) do
-        create(:ward, {
-          address: "GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7",
+      let!(:txn) do
+        create(:txn, {
+          external_id: "3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889",
         })
       end
       let(:operation) { build_stubbed(:operation) }
 
-      it "creates the operation and enqueues ProcessWardOperationJob per ward interested" do
+      it "creates the operation" do
         expect(Operation).to receive(:create!).with(
           external_id: "12884905986",
-          ledger_sequence: 3,
+          txn_external_id: "3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889",
           body: remote_operation.to_hash,
         ).and_return(operation)
 
@@ -74,7 +78,7 @@ module ProcessingLedgerOperations
 
         described_class.execute({
           remote_operation: remote_operation,
-          ledger_sequence: 3,
+          txn: txn,
         })
       end
     end

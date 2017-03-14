@@ -1,0 +1,260 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://horizon.stellar.org/ledgers/3/transactions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/hal+json
+      Accept:
+      - application/hal+json,application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/hal+json; charset=utf-8
+      Date:
+      - Tue, 14 Mar 2017 08:03:02 GMT
+      X-Ratelimit-Limit:
+      - '72000'
+      X-Ratelimit-Remaining:
+      - '71999'
+      X-Ratelimit-Reset:
+      - '3600'
+      Content-Length:
+      - '3825'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "_links": {
+            "self": {
+              "href": "https://horizon.stellar.org/ledgers/3/transactions?order=asc\u0026limit=10\u0026cursor="
+            },
+            "next": {
+              "href": "https://horizon.stellar.org/ledgers/3/transactions?order=asc\u0026limit=10\u0026cursor=12884905984"
+            },
+            "prev": {
+              "href": "https://horizon.stellar.org/ledgers/3/transactions?order=desc\u0026limit=10\u0026cursor=12884905984"
+            }
+          },
+          "_embedded": {
+            "records": [
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889"
+                  },
+                  "account": {
+                    "href": "https://horizon.stellar.org/accounts/GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7"
+                  },
+                  "ledger": {
+                    "href": "https://horizon.stellar.org/ledgers/3"
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889/effects{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "precedes": {
+                    "href": "https://horizon.stellar.org/transactions?order=asc\u0026cursor=12884905984"
+                  },
+                  "succeeds": {
+                    "href": "https://horizon.stellar.org/transactions?order=desc\u0026cursor=12884905984"
+                  }
+                },
+                "id": "3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889",
+                "paging_token": "12884905984",
+                "hash": "3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889",
+                "ledger": 3,
+                "created_at": "2015-09-30T17:15:54Z",
+                "source_account": "GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7",
+                "source_account_sequence": "1",
+                "fee_paid": 300,
+                "operation_count": 3,
+                "envelope_xdr": "AAAAAAGUcmKO5465JxTSLQOQljwk2SfqAJmZSG6JH6wtqpwhAAABLAAAAAAAAAABAAAAAAAAAAEAAAALaGVsbG8gd29ybGQAAAAAAwAAAAAAAAAAAAAAABbxCy3mLg3hiTqX4VUEEp60pFOrJNxYM1JtxXTwXhY2AAAAAAvrwgAAAAAAAAAAAQAAAAAW8Qst5i4N4Yk6l+FVBBKetKRTqyTcWDNSbcV08F4WNgAAAAAN4Lazj4x61AAAAAAAAAAFAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABLaqcIQAAAEBKwqWy3TaOxoGnfm9eUjfTRBvPf34dvDA0Nf+B8z4zBob90UXtuCqmQqwMCyH+okOI3c05br3khkH0yP4kCwcE",
+                "result_xdr": "AAAAAAAAASwAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAFAAAAAAAAAAA=",
+                "result_meta_xdr": "AAAAAAAAAAMAAAACAAAAAAAAAAMAAAAAAAAAABbxCy3mLg3hiTqX4VUEEp60pFOrJNxYM1JtxXTwXhY2AAAAAAvrwgAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAMAAAAAAAAAAAGUcmKO5465JxTSLQOQljwk2SfqAJmZSG6JH6wtqpwhDeC2s5t4PNQAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAEAAAADAAAAAAAAAAABlHJijueOuScU0i0DkJY8JNkn6gCZmUhuiR+sLaqcIQAAAAAL68IAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAEAAAADAAAAAAAAAAAW8Qst5i4N4Yk6l+FVBBKetKRTqyTcWDNSbcV08F4WNg3gtrObeDzUAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAwAAAAAAAAAAAZRyYo7njrknFNItA5CWPCTZJ+oAmZlIbokfrC2qnCEAAAAAC+vCAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+                "fee_meta_xdr": "AAAAAgAAAAMAAAABAAAAAAAAAAABlHJijueOuScU0i0DkJY8JNkn6gCZmUhuiR+sLaqcIQ3gtrOnZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAEAAAADAAAAAAAAAAABlHJijueOuScU0i0DkJY8JNkn6gCZmUhuiR+sLaqcIQ3gtrOnY/7UAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==",
+                "memo_type": "text",
+                "memo": "hello world",
+                "signatures": [
+                  "SsKlst02jsaBp35vXlI300Qbz39+HbwwNDX/gfM+MwaG/dFF7bgqpkKsDAsh/qJDiN3NOW695IZB9Mj+JAsHBA=="
+                ]
+              }
+            ]
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 14 Mar 2017 08:03:01 GMT
+- request:
+    method: get
+    uri: https://horizon.stellar.org/ledgers/3/transactions?cursor=&limit=10&order=asc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/hal+json
+      Accept:
+      - application/hal+json,application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/hal+json; charset=utf-8
+      Date:
+      - Tue, 14 Mar 2017 08:03:04 GMT
+      X-Ratelimit-Limit:
+      - '72000'
+      X-Ratelimit-Remaining:
+      - '71999'
+      X-Ratelimit-Reset:
+      - '3600'
+      Content-Length:
+      - '3825'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "_links": {
+            "self": {
+              "href": "https://horizon.stellar.org/ledgers/3/transactions?order=asc\u0026limit=10\u0026cursor="
+            },
+            "next": {
+              "href": "https://horizon.stellar.org/ledgers/3/transactions?order=asc\u0026limit=10\u0026cursor=12884905984"
+            },
+            "prev": {
+              "href": "https://horizon.stellar.org/ledgers/3/transactions?order=desc\u0026limit=10\u0026cursor=12884905984"
+            }
+          },
+          "_embedded": {
+            "records": [
+              {
+                "_links": {
+                  "self": {
+                    "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889"
+                  },
+                  "account": {
+                    "href": "https://horizon.stellar.org/accounts/GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7"
+                  },
+                  "ledger": {
+                    "href": "https://horizon.stellar.org/ledgers/3"
+                  },
+                  "operations": {
+                    "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889/operations{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "effects": {
+                    "href": "https://horizon.stellar.org/transactions/3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889/effects{?cursor,limit,order}",
+                    "templated": true
+                  },
+                  "precedes": {
+                    "href": "https://horizon.stellar.org/transactions?order=asc\u0026cursor=12884905984"
+                  },
+                  "succeeds": {
+                    "href": "https://horizon.stellar.org/transactions?order=desc\u0026cursor=12884905984"
+                  }
+                },
+                "id": "3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889",
+                "paging_token": "12884905984",
+                "hash": "3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889",
+                "ledger": 3,
+                "created_at": "2015-09-30T17:15:54Z",
+                "source_account": "GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7",
+                "source_account_sequence": "1",
+                "fee_paid": 300,
+                "operation_count": 3,
+                "envelope_xdr": "AAAAAAGUcmKO5465JxTSLQOQljwk2SfqAJmZSG6JH6wtqpwhAAABLAAAAAAAAAABAAAAAAAAAAEAAAALaGVsbG8gd29ybGQAAAAAAwAAAAAAAAAAAAAAABbxCy3mLg3hiTqX4VUEEp60pFOrJNxYM1JtxXTwXhY2AAAAAAvrwgAAAAAAAAAAAQAAAAAW8Qst5i4N4Yk6l+FVBBKetKRTqyTcWDNSbcV08F4WNgAAAAAN4Lazj4x61AAAAAAAAAAFAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABLaqcIQAAAEBKwqWy3TaOxoGnfm9eUjfTRBvPf34dvDA0Nf+B8z4zBob90UXtuCqmQqwMCyH+okOI3c05br3khkH0yP4kCwcE",
+                "result_xdr": "AAAAAAAAASwAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAFAAAAAAAAAAA=",
+                "result_meta_xdr": "AAAAAAAAAAMAAAACAAAAAAAAAAMAAAAAAAAAABbxCy3mLg3hiTqX4VUEEp60pFOrJNxYM1JtxXTwXhY2AAAAAAvrwgAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAMAAAAAAAAAAAGUcmKO5465JxTSLQOQljwk2SfqAJmZSG6JH6wtqpwhDeC2s5t4PNQAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAEAAAADAAAAAAAAAAABlHJijueOuScU0i0DkJY8JNkn6gCZmUhuiR+sLaqcIQAAAAAL68IAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAEAAAADAAAAAAAAAAAW8Qst5i4N4Yk6l+FVBBKetKRTqyTcWDNSbcV08F4WNg3gtrObeDzUAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAwAAAAAAAAAAAZRyYo7njrknFNItA5CWPCTZJ+oAmZlIbokfrC2qnCEAAAAAC+vCAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+                "fee_meta_xdr": "AAAAAgAAAAMAAAABAAAAAAAAAAABlHJijueOuScU0i0DkJY8JNkn6gCZmUhuiR+sLaqcIQ3gtrOnZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAEAAAADAAAAAAAAAAABlHJijueOuScU0i0DkJY8JNkn6gCZmUhuiR+sLaqcIQ3gtrOnY/7UAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==",
+                "memo_type": "text",
+                "memo": "hello world",
+                "signatures": [
+                  "SsKlst02jsaBp35vXlI300Qbz39+HbwwNDX/gfM+MwaG/dFF7bgqpkKsDAsh/qJDiN3NOW695IZB9Mj+JAsHBA=="
+                ]
+              }
+            ]
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 14 Mar 2017 08:03:03 GMT
+- request:
+    method: get
+    uri: https://horizon.stellar.org/ledgers/3/transactions?cursor=12884905984&limit=10&order=asc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/hal+json
+      Accept:
+      - application/hal+json,application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/hal+json; charset=utf-8
+      Date:
+      - Tue, 14 Mar 2017 08:03:06 GMT
+      X-Ratelimit-Limit:
+      - '72000'
+      X-Ratelimit-Remaining:
+      - '71998'
+      X-Ratelimit-Reset:
+      - '3596'
+      Content-Length:
+      - '469'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "_links": {
+            "self": {
+              "href": "https://horizon.stellar.org/ledgers/3/transactions?order=asc\u0026limit=10\u0026cursor=12884905984"
+            },
+            "next": {
+              "href": "https://horizon.stellar.org/ledgers/3/transactions?order=asc\u0026limit=10\u0026cursor=12884905984"
+            },
+            "prev": {
+              "href": "https://horizon.stellar.org/ledgers/3/transactions?order=desc\u0026limit=10\u0026cursor=12884905984"
+            }
+          },
+          "_embedded": {
+            "records": []
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 14 Mar 2017 08:03:04 GMT
+recorded_with: VCR 3.0.3

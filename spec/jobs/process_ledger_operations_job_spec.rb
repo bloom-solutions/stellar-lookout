@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe ProcessLedgerOperationsJob do
+RSpec.describe ProcessTxnOperationsJob do
 
-  it "delegates work to ProcessLedgerOperations" do
-    expect(ProcessLedgerOperations).to receive(:call).with(77)
-    described_class.new.perform(77)
+  it "delegates work to ProcessTxnOperations" do
+    expect(ProcessTxnOperations).to receive(:call).with("b49")
+    described_class.new.perform("b49")
   end
 
 end

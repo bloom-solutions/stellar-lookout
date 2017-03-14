@@ -7,7 +7,7 @@ RSpec.describe ProcessLedger do
   it "calls actions in order" do
     actions = [
       ProcessingLedger::CreateOrUpdateLedger,
-      ProcessingLedger::EnqueueProcessLedgerOperations,
+      ProcessingLedger::EnqueueProcessLedgerTxns,
     ]
 
     ctx = LightService::Context.new(remote_ledger_hash: remote_ledger_hash)

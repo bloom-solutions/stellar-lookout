@@ -1,4 +1,4 @@
-module ProcessingLedgerOperations
+module ProcessingTxnOperations
   class EnqueueProcessWardOperationJobs
 
     def self.call(operation)

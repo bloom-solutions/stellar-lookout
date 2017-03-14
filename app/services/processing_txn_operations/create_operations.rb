@@ -1,15 +1,12 @@
-module ProcessingLedgerOperations
+module ProcessingTxnOperations
   class CreateOperations
 
     extend LightService::Action
-    expects :client, :ledger_sequence
+    expects :client, :txn
 
     executed do |c|
       each_operation(c.client._links.self) do |remote_operation|
-        ProcessOperation.execute({
-          remote_operation: remote_operation,
-          ledger_sequence: c.ledger_sequence,
-        })
+        ProcessOperation.execute(remote_operation: remote_operation, txn: c.txn)
       end
     end
 

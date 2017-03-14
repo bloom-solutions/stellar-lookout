@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-module ProcessingLedgerOperations
+module ProcessingTxnOperations
   RSpec.describe EnqueueProcessWardOperationJobs do
 
     let(:ward_1) { create(:ward) }

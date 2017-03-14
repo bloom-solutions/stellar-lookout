@@ -4,11 +4,12 @@ RSpec.describe Ledger do
 
   describe "associations" do
     it do
-      is_expected.to have_many(:operations).
+      is_expected.to have_many(:txns).
         with_primary_key(:sequence).
         with_foreign_key(:ledger_sequence).
         dependent(:destroy)
     end
+    it { is_expected.to have_many(:operations).through(:txns) }
   end
 
   describe ".sequence_before" do

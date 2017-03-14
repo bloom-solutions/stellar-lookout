@@ -14,10 +14,9 @@ class Operation < ActiveRecord::Base
     trustor
   ]
 
-  belongs_to(:ledger, {
-    primary_key: :sequence,
-    foreign_key: "ledger_sequence",
-  })
+  belongs_to(:txn, primary_key: :external_id, foreign_key: :txn_external_id)
+
+  delegate :ledger, to: :txn
 
   scope :watched_by, ->(ward) do
     sql_parts = ADDRESS_FIELDS.map do |field|

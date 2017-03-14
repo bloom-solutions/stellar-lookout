@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170314034954) do
+ActiveRecord::Schema.define(version: 20170314071638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,10 +27,10 @@ ActiveRecord::Schema.define(version: 20170314034954) do
 
   create_table "operations", force: :cascade do |t|
     t.string   "external_id",                  null: false
-    t.integer  "ledger_sequence",              null: false
     t.jsonb    "body",            default: {}, null: false
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+    t.string   "txn_external_id",              null: false
     t.index "((body ->> 'asset_issuer'::text))", name: "operations_asset_issuer", using: :btree
     t.index "((body ->> 'buying_asset_issuer'::text))", name: "operations_buying_asset_issuer", using: :btree
     t.index "((body ->> 'from'::text))", name: "operations_from", using: :btree
@@ -64,6 +64,14 @@ ActiveRecord::Schema.define(version: 20170314034954) do
     t.index ["ward_id"], name: "index_reports_on_ward_id", using: :btree
   end
 
+  create_table "txns", force: :cascade do |t|
+    t.string  "external_id",     null: false
+    t.integer "ledger_sequence", null: false
+    t.jsonb   "body"
+    t.index ["external_id"], name: "index_txns_on_external_id", unique: true, using: :btree
+    t.index ["ledger_sequence"], name: "index_txns_on_ledger_sequence", using: :btree
+  end
+
   create_table "wards", force: :cascade do |t|
     t.string   "address",      null: false
     t.string   "callback_url", null: false
@@ -73,6 +81,7 @@ ActiveRecord::Schema.define(version: 20170314034954) do
     t.index ["address", "callback_url"], name: "index_wards_on_address_and_callback_url", unique: true, using: :btree
   end
 
+  add_foreign_key "operations", "txns", column: "txn_external_id", primary_key: "external_id"
   add_foreign_key "report_responses", "reports"
   add_foreign_key "reports", "operations"
   add_foreign_key "reports", "wards"

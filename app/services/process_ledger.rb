@@ -5,7 +5,7 @@ class ProcessLedger
   def self.call(remote_ledger_hash)
     with(remote_ledger_hash: remote_ledger_hash).reduce(
       ProcessingLedger::CreateOrUpdateLedger,
-      ProcessingLedger::EnqueueProcessLedgerOperations,
+      ProcessingLedger::EnqueueProcessLedgerTxns,
     )
   end
 
