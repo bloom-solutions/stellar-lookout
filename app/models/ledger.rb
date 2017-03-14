@@ -8,4 +8,8 @@ class Ledger < ActiveRecord::Base
 
   store_accessor :body, :operation_count, :paging_token
 
+  scope :sequence_before, ->(sequence) do
+    where(arel_table[:sequence].lt(sequence))
+  end
+
 end

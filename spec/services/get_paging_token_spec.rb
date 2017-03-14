@@ -19,6 +19,11 @@ RSpec.describe GetPagingToken do
       end
       it { is_expected.to eq paging_token }
     end
+
+    context "given a nil sequence" do
+      let(:sequence) { nil }
+      it { is_expected.to be_nil }
+    end
   end
 
   describe ".execute" do

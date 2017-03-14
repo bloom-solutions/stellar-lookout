@@ -9,11 +9,10 @@ class GetPagingToken
   end
 
   def self.of_sequence(sequence)
-    if ledger = Ledger.find_by(sequence: sequence)
-      ledger.paging_token
-    else
-      client(sequence).paging_token
-    end
+    return nil if sequence.nil?
+    ledger = Ledger.find_by(sequence: sequence)
+    return ledger.paging_token if ledger
+    client(sequence).paging_token
   end
 
   private
