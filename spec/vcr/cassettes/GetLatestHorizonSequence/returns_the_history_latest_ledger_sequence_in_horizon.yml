@@ -23,15 +23,15 @@ http_interactions:
       Content-Type:
       - application/hal+json; charset=utf-8
       Date:
-      - Tue, 07 Mar 2017 06:28:56 GMT
+      - Tue, 14 Mar 2017 03:00:58 GMT
       X-Ratelimit-Limit:
       - '72000'
       X-Ratelimit-Remaining:
-      - '71983'
+      - '71996'
       X-Ratelimit-Reset:
-      - '2238'
+      - '3398'
       Content-Length:
-      - '1282'
+      - '1279'
       Connection:
       - keep-alive
     body:
@@ -71,15 +71,15 @@ http_interactions:
             }
           },
           "horizon_version": "v0.8.0",
-          "core_version": "v0.5.1-144-g3c4e356",
-          "history_latest_ledger": 9459027,
+          "core_version": "v0.6-24-g3f53018",
+          "history_latest_ledger": 9578610,
           "history_elder_ledger": 1,
-          "core_latest_ledger": 9459027,
+          "core_latest_ledger": 9578610,
           "core_elder_ledger": 1,
           "network_passphrase": "Public Global Stellar Network ; September 2015"
         }
     http_version: 
-  recorded_at: Tue, 07 Mar 2017 06:28:54 GMT
+  recorded_at: Tue, 14 Mar 2017 03:00:57 GMT
 - request:
     method: get
     uri: https://horizon.stellar.org/
@@ -103,15 +103,15 @@ http_interactions:
       Content-Type:
       - application/hal+json; charset=utf-8
       Date:
-      - Tue, 07 Mar 2017 06:28:57 GMT
+      - Tue, 14 Mar 2017 03:01:00 GMT
       X-Ratelimit-Limit:
       - '72000'
       X-Ratelimit-Remaining:
-      - '71982'
+      - '71995'
       X-Ratelimit-Reset:
-      - '2237'
+      - '3396'
       Content-Length:
-      - '1282'
+      - '1279'
       Connection:
       - keep-alive
     body:
@@ -151,13 +151,13 @@ http_interactions:
             }
           },
           "horizon_version": "v0.8.0",
-          "core_version": "v0.5.1-144-g3c4e356",
-          "history_latest_ledger": 9459027,
+          "core_version": "v0.6-24-g3f53018",
+          "history_latest_ledger": 9578610,
           "history_elder_ledger": 1,
-          "core_latest_ledger": 9459027,
+          "core_latest_ledger": 9578610,
           "core_elder_ledger": 1,
           "network_passphrase": "Public Global Stellar Network ; September 2015"
         }
     http_version: 
-  recorded_at: Tue, 07 Mar 2017 06:28:54 GMT
+  recorded_at: Tue, 14 Mar 2017 03:00:59 GMT
 recorded_with: VCR 3.0.3
