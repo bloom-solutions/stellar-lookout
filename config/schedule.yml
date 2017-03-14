@@ -9,6 +9,6 @@ backward_sync_ledgers:
   active_job: true
 
 process_pending_reports:
-  cron: "*/10 * * * * *"
+  cron: "*/30 * * * * *"
   class: "ProcessPendingReportsJob"
   active_job: true
