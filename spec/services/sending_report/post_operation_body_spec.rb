@@ -29,7 +29,10 @@ module SendingReport
     it "posts to the operation's body with the correct hmac signature" do
       stub_request(:post, "https://cb.com").with(
         body: {body: body.to_json}.to_json,
-        headers: {"Authorization" => "HMAC-SHA256 #{expected_hmac_signature}"},
+        headers: {
+          "Authorization" => "HMAC-SHA256 #{expected_hmac_signature}",
+          "Content-Type" => "application/json",
+        },
       ).to_return(body: {"ok" => "body"}.to_json)
 
       resulting_ctx = described_class.execute(report: report)
