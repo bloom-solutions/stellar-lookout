@@ -24,7 +24,7 @@ module SendingReport
 
       c.response = client.post do |request|
         request.url ward.callback_url
-        request.body = body.to_json
+        request.body = { body: body.to_json }.to_json
         request.headers["Authorization"] = "HMAC-SHA256 #{signature}"
       end
     end

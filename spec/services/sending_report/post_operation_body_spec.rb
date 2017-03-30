@@ -28,7 +28,7 @@ module SendingReport
 
     it "posts to the operation's body with the correct hmac signature" do
       stub_request(:post, "https://cb.com").with(
-        body: body.to_json,
+        body: {body: body.to_json}.to_json,
         headers: {"Authorization" => "HMAC-SHA256 #{expected_hmac_signature}"},
       ).to_return(body: {"ok" => "body"}.to_json)
 
