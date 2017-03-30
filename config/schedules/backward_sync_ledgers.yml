@@ -1,0 +1,4 @@
+backward_sync_ledgers:
+  cron: "*/2 * * * *"
+  class: "BackwardSyncLedgersJob"
+  active_job: true
