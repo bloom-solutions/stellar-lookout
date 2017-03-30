@@ -43,6 +43,7 @@ gem 'sidekiq-unique-jobs', "~> 4.0"
 gem "faraday-detailed_logger", "~> 2.1"
 gem "apipie-rails", "0.3.6"
 gem "maruku", "0.7.2"
+gem "lograge", "0.4.1"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
