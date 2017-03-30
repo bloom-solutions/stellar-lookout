@@ -1,0 +1,4 @@
+forward_sync_ledgers:
+  cron: "*/30 * * * * *"
+  class: "ForwardSyncLedgersJob"
+  active_job: true

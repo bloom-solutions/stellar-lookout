@@ -11,3 +11,7 @@ Documentation is still under development. See `app/controllers/api/v1/wards_cont
 To get this running on Docker, you need to set the environment variables you see in `.env.production`.
 
 Images are available in [Docker Hub](https://hub.docker.com/r/bloomsolutions/stellar_lookout).
+
+## Configuration
+
+If you do not want to sync backwards in time (like in development), then set the `BACKWARD_SYNC_LEDGERS=false` in the env.
