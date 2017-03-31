@@ -10,7 +10,7 @@ module SendingReport
 
       ReportResponse.create!(
         report_id: report.id,
-        status: response.status,
+        status_code: response.status,
         body: response.body,
       )
 

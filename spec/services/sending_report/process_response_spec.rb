@@ -2,7 +2,7 @@ require 'rails_helper'
 
 module SendingReport
   RSpec.describe ProcessResponse do
-    
+
     context "unsuccessful response" do
       let(:report) { build_stubbed(:report) }
       let(:response) do
@@ -15,7 +15,7 @@ module SendingReport
       it "creates a report response and marks the report as completed" do
         expect(ReportResponse).to receive(:create!).with(
           report_id: report.id,
-          status: 400,
+          status_code: 400,
           body: {some: "response"},
         )
 
@@ -37,7 +37,7 @@ module SendingReport
       it "creates a report response and marks the report as completed" do
         expect(ReportResponse).to receive(:create!).with(
           report_id: report.id,
-          status: 200,
+          status_code: 200,
           body: {some: "response"},
         )
 
