@@ -12,3 +12,7 @@ development: &default
 test:
   <<: *default
   database: app_test
+
+production:
+  <<: *default
+  pool: 10
