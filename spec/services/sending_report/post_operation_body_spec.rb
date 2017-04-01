@@ -40,5 +40,21 @@ module SendingReport
       expect(resulting_ctx.response.body).to be_present
     end
 
+    context "connection error is raised" do
+      it "fails the context" do
+        stub_request(:post, "https://cb.com").with(
+          body: {body: body.to_json}.to_json,
+          headers: {
+            "Authorization" => "HMAC-SHA256 #{expected_hmac_signature}",
+            "Content-Type" => "application/json",
+          },
+        ).to_raise(Faraday::Error)
+
+        resulting_ctx = described_class.execute(report: report)
+
+        expect(resulting_ctx).to be_failure
+      end
+    end
+
   end
 end
