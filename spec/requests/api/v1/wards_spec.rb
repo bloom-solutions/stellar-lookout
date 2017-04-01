@@ -26,6 +26,7 @@ RSpec.describe "/api/v1/wards" do
     expect(attributes["callback-url"]).to eq "https://mysite.com/cb1"
     expect(attributes["secret"]).to eq "mysecret"
 
+    # Create the same one again
     jsonapi_post("/api/v1/wards", {
       params: {
         data: {
@@ -54,6 +55,32 @@ RSpec.describe "/api/v1/wards" do
       callback_url: "https://mysite.com/cb1",
     })
     expect(wards.count).to eq 1
+
+    # Create another with a different callback url
+    jsonapi_post("/api/v1/wards", {
+      params: {
+        data: {
+          type: "wards",
+          attributes: {
+            "address" => "stellar-address",
+            "callback-url" => "https://mysite.com/cb2",
+            "secret" => "mysecret",
+          },
+        }
+      }
+    })
+
+    expect(response).to be_success
+
+    response_body = JSON.parse(response.body)
+    data = response_body["data"]
+
+    attributes = data["attributes"]
+    expect(attributes["address"]).to eq "stellar-address"
+    expect(attributes["callback-url"]).to eq "https://mysite.com/cb2"
+
+    wards = Ward.where(address: "stellar-address")
+    expect(wards.count).to eq 2
   end
 
 end
