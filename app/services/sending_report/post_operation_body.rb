@@ -17,7 +17,7 @@ module SendingReport
       begin
         c.response = post(client, ward, body_from(report.operation))
       rescue Faraday::Error => e
-        c.fail!
+        c.fail!([e.class, e.message].join(" - "))
       end
     end
 

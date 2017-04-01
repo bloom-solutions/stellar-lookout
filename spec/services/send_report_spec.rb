@@ -35,4 +35,21 @@ RSpec.describe SendReport do
     end
   end
 
+  context "resulting ctx failed" do
+    let(:report) { create(:report, status: "pending") }
+
+    it "creates a report response" do
+      ctx = LightService::Context.new(report: report)
+      ctx.fail!("Message in the context")
+
+      expect(actions.first).to receive(:execute).with(ctx).and_return(ctx)
+
+      described_class.(report)
+
+      report_response = report.report_responses.last
+      expect(report_response).to be_present
+      expect(report_response.body).to eq "Message in the context"
+    end
+  end
+
 end

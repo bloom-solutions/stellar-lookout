@@ -48,11 +48,12 @@ module SendingReport
             "Authorization" => "HMAC-SHA256 #{expected_hmac_signature}",
             "Content-Type" => "application/json",
           },
-        ).to_raise(Faraday::Error)
+        ).to_raise(Faraday::Error.new("message"))
 
         resulting_ctx = described_class.execute(report: report)
 
         expect(resulting_ctx).to be_failure
+        expect(resulting_ctx.message).to eq "Faraday::Error - message"
       end
     end
 
