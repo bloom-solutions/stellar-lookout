@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Ward do
 
+  describe "associations" do
+    it { is_expected.to have_many(:reports).dependent(:destroy) }
+  end
+
   describe ".watching" do
     let!(:ward) do
       create(:ward, {
