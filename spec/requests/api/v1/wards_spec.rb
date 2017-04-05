@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "/api/v1/wards" do
 
-  it "creates a ward if it does not exist" do
+  it "creates a ward if it does not exist", cleaning_strategy: :truncation do
     jsonapi_post("/api/v1/wards", {
       params: {
         data: {
@@ -56,6 +56,8 @@ RSpec.describe "/api/v1/wards" do
     })
     expect(wards.count).to eq 1
 
+    expect(WardAfterCreateJob).to have_been_enqueued.with(wards.first)
+
     # Create another with a different callback url
     jsonapi_post("/api/v1/wards", {
       params: {
@@ -81,6 +83,8 @@ RSpec.describe "/api/v1/wards" do
 
     wards = Ward.where(address: "stellar-address")
     expect(wards.count).to eq 2
+
+    expect(WardAfterCreateJob).to have_been_enqueued.with(wards.last)
   end
 
 end

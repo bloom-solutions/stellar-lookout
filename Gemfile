@@ -44,6 +44,7 @@ gem "faraday-detailed_logger", "~> 2.1"
 gem "apipie-rails", "0.3.6"
 gem "maruku", "0.7.2"
 gem "lograge", "0.4.1"
+gem "ar_after_transaction", "0.4.0"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -70,6 +71,7 @@ group :test do
   gem "timecop", "0.8.0"
   gem "vcr", "~> 3.0"
   gem "webmock", "~> 2.3"
+  gem "database_cleaner"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
