@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ProcessWardOperation do
+RSpec.describe ProcessWardOperation, cleaning_strategy: :truncation do
 
   let(:ward) { create(:ward) }
   let(:operation) { create(:operation) }

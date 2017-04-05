@@ -8,7 +8,9 @@ class ProcessWardOperation
 
     report.save!
 
-    SendReportJob.perform_later(report)
+    ActiveRecord::Base.after_transaction do
+      SendReportJob.perform_later(report)
+    end
   end
 
 end

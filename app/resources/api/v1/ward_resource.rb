@@ -9,7 +9,9 @@ module Api
       private
 
       def enqueue_after_create_job
-        WardAfterCreateJob.perform_later(@model)
+        ActiveRecord::Base.after_transaction do
+          WardAfterCreateJob.perform_later(@model)
+        end
       end
 
     end
