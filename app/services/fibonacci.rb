@@ -5,7 +5,8 @@ class Fibonacci
   def self.call(n)
     return n if n <= 1
     sequence = [n, LIMIT].min
-    self.(sequence-1) + self.(sequence-2)
+    @cache ||= {}
+    @cache[n] ||= self.(sequence-1) + self.(sequence-2)
   end
 
 end
