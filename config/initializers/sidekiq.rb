@@ -2,7 +2,7 @@ Sidekiq.configure_server do |config|
   Sidekiq::Cron::Job.destroy_all!
 
   Sidekiq.default_worker_options = {
-    unique: :until_executing,
+    lock: :until_executing,
     unique_args: ->(args) { [ args.first.except('job_id') ] }
   }
 
