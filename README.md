@@ -15,3 +15,11 @@ Images are available in [Docker Hub](https://hub.docker.com/r/bloomsolutions/ste
 ## Configuration
 
 If you do not want to sync backwards in time (like in development), then set the `BACKWARD_SYNC_LEDGERS=false` in the env.
+
+## Development
+
+```sh
+docker-compose up db
+cp config/database.yml{.sample,}
+bundle exec rake db:create db:migrate db:test:prepare
+```
