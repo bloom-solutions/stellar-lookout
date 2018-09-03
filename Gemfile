@@ -9,7 +9,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0'
+gem 'rails', '~> 5.1.6'
 # Use sqlite3 as the database for Active Record
 gem 'pg', "0.19.0"
 # Use Puma as the app server
@@ -43,9 +43,9 @@ gem "sidekiq", "~> 5.2"
 gem "sidekiq-cron", "~> 1.0"
 gem 'sidekiq-unique-jobs', "~> 6.0"
 gem "faraday-detailed_logger", "~> 2.1"
-gem "apipie-rails", "0.3.6"
+gem "apipie-rails", "0.5.10"
 gem "maruku", "0.7.2"
-gem "lograge", "0.4.1"
+gem "lograge", "0.10.0"
 gem "ar_after_transaction", "0.4.0"
 
 group :development, :test do
