@@ -5,7 +5,7 @@ module Api
       def create_resource
         data = params[:data]
         record = resource_klass._model_class.
-          find_by(data[:attributes].slice(:address, :callback_url))
+          find_by(data[:attributes].slice(:address))
         resource = record.present? ?  resource_klass.new(record, {}) : nil
 
         if resource.nil?

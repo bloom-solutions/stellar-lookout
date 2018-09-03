@@ -4,7 +4,7 @@ module Api
 
       after_create :enqueue_after_create_job
 
-      attributes *%i[address callback_url secret]
+      attributes *%i[address]
 
       private
 

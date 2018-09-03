@@ -8,8 +8,6 @@ module Api
       subject { described_class.new(ward, {}) }
 
       it { is_expected.to have_attribute(:address) }
-      it { is_expected.to have_attribute(:callback_url) }
-      it { is_expected.to have_attribute(:secret) }
 
     end
   end
