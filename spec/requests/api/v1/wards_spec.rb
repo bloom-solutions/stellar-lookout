@@ -16,7 +16,7 @@ RSpec.describe "/api/v1/wards" do
       }
     })
 
-    expect(response).to be_success
+    expect(response).to be_successful
 
     response_body = JSON.parse(response.body)
     data = response_body["data"]
@@ -40,7 +40,7 @@ RSpec.describe "/api/v1/wards" do
       }
     })
 
-    expect(response).to be_success
+    expect(response).to be_successful
 
     response_body = JSON.parse(response.body)
     data = response_body["data"]
@@ -72,7 +72,7 @@ RSpec.describe "/api/v1/wards" do
       }
     })
 
-    expect(response).to be_success
+    expect(response).to be_successful
 
     response_body = JSON.parse(response.body)
     data = response_body["data"]

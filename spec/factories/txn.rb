@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
 
   factory :txn do
     sequence(:external_id) {|n| n}
