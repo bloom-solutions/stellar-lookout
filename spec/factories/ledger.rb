@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
 
   factory :ledger do
     external_id { SecureRandom.hex }
