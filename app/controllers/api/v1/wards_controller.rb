@@ -13,20 +13,12 @@ module Api
             desc: "Stellar account id / address that you want to watch",
             required: true,
           })
-          param("callback-url", String, {
-            desc: "Where you are notified of activity",
-            required: true,
-          })
-          param(:secret, String, {
-            desc: "A secret used to sign the body posted back to you",
-          })
         end
       end
       description <<-STR
-      Create wards that watch Stellar addresses. When there is an operation that your ward is interested in, the `callback-url` specified will receive a POST. What is posted is exactly what horizon generates for the operation. See examples.
+      Create wards that watch Stellar addresses. When there is an operation that your ward is interested in, the StellarLookout will publish the details in the MessageBus channel if your address (`/G-STELLAR-ADDRESS`).
 
-      ### Retry
-      If the callback server responds with a non-success HTTP status, StellarLookout will keep retrying to send for about 28 days.
+      The JSON that is published is exactly what is seen in horizon. Published messages are kept for a set amount of time or set number of messages (this is configurable).
       STR
       example <<-STR
       # Create a ward
@@ -39,18 +31,12 @@ module Api
           "data": {
             "type": "wards",
             "attributes": {
-              "address": "stellar-address",
-              "callback-url": "https://mysite.com/cb1",
-              "secret": "mysecret"
+              "address": "GBS43BF24ENNS3KPACUZVKK2VYPOZVBQO2CISGZ777RYGOPYC2FT6S3K",
             }
           }
         }
 
-      # Callback
-      Headers:
-        - Authorization: HMAC-SHA256 681ab1a0c545ff9c6529e63abd64823355dee3d53ea9219ef59ee31ff724c217
-
-      Body:
+      This will be published in the `/GBS43BF24ENNS3KPACUZVKK2VYPOZVBQO2CISGZ777RYGOPYC2FT6S3K` channel:
         {
           "_links": {
             "self": {

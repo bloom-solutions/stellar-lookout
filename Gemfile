@@ -46,6 +46,7 @@ gem "maruku", "0.7.2"
 gem "lograge", "0.10.0"
 gem "ar_after_transaction", "0.4.0"
 gem "bootsnap", require: false
+gem "message_bus", "~> 2.1"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
