@@ -1,4 +1,6 @@
 Sidekiq.configure_server do |config|
+  config.poll_interval = 10
+
   Sidekiq::Cron::Job.destroy_all!
 
   Sidekiq.default_worker_options = {
