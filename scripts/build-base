@@ -5,5 +5,5 @@ set -e
 
 docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
 
-export REPO_NAME=bloomsolutions/stellar_lookout
+export REPO_NAME=bloomsolutions/stellar-lookout
 export GIT_REF=`git rev-parse --short --verify HEAD`
