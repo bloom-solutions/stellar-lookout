@@ -8,6 +8,10 @@ Sidekiq.configure_server do |config|
     unique_args: ->(args) { [ args.first.except('job_id') ] }
   }
 
+  config.death_handlers << ->(job, _ex) do
+    SidekiqUniqueJobs::Digests.del(digest: job['unique_digest']) if job['unique_digest']
+  end
+
   Dir[Rails.root.join("config", "schedules", "*.yml")].each do |file|
     var_name = Pathname.new(file).basename(".*").to_s.upcase
     if ENV[var_name] != "false"
