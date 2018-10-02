@@ -5,7 +5,10 @@ set -e
 
 . ./scripts/build-base
 
+docker pull $REPO_NAME:staging-latest
+
 docker build --rm=false \
+  --cache-from=$REPO_NAME:staging-latest \
   --file=ops/prod/Dockerfile \
   --tag=$REPO_NAME:staging-latest \
   --tag=$REPO_NAME:staging-$GIT_REF \

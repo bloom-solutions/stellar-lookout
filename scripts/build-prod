@@ -5,7 +5,10 @@ set -e
 
 . ./scripts/build-base
 
+docker pull $REPO_NAME:prod-latest
+
 docker build --rm=false \
+  --cache-from=$REPO_NAME:prod-latest \
   --file=ops/prod/Dockerfile \
   --tag=$REPO_NAME:prod-latest \
   --tag=$REPO_NAME:prod-$GIT_REF \
