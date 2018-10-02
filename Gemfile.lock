@@ -243,6 +243,8 @@ GEM
     sidekiq-cron (1.0.0)
       fugit (~> 1.1)
       sidekiq (>= 4.2.1)
+    sidekiq-failures (1.0.0)
+      sidekiq (>= 4.0.0)
     sidekiq-unique-jobs (6.0.6)
       concurrent-ruby (~> 1.0, >= 1.0.5)
       sidekiq (>= 4.0, < 6.0)
@@ -321,6 +323,7 @@ DEPENDENCIES
   shoulda-matchers (~> 3.1)
   sidekiq (~> 5.2)
   sidekiq-cron (~> 1.0)
+  sidekiq-failures (~> 1.0)
   sidekiq-unique-jobs (~> 6.0)
   spring
   spring-commands-rspec

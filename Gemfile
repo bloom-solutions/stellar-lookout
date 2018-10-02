@@ -40,6 +40,7 @@ gem 'jbuilder', '~> 2.5'
 gem "sidekiq", "~> 5.2"
 gem "sidekiq-cron", "~> 1.0"
 gem 'sidekiq-unique-jobs', "~> 6.0"
+gem 'sidekiq-failures', "~> 1.0"
 gem "faraday-detailed_logger", "~> 2.1"
 gem "apipie-rails", "0.5.10"
 gem "maruku", "0.7.2"
